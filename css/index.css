@@ -20,4 +20,21 @@ body {
   font-weight: 400;
   line-height: 1.2;
   color: #555;
+}
+
+.btn {
+  font-size: 1.6rem;
+  font-weight: 500;
+  font-family: inherit;
+  color: #fff;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 1.6rem 3.2rem;
+  background-color: #e67e22;
+  transition: all 0.3s;
+}
+.btn:hover {
+  background-color: #cf711f;
 }/*# sourceMappingURL=index.css.map */
