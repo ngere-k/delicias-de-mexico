@@ -1,7 +1,11 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
-import logo from "../../assets/img/logo2.png";
-import { PiUserPlusFill, PiShoppingCartFill } from "react-icons/pi";
+import logo from "../../assets/img/logo.png";
+import {
+  PiUserPlusFill,
+  PiUserMinusFill,
+  PiShoppingCartFill,
+} from "react-icons/pi";
 
 // styles
 import "./Navbar.scss";
@@ -52,6 +56,13 @@ const Navbar = () => {
 
         <ul className="main-nav__list-2">
           <li>
+            <span to="sign-in" className="main-nav__user">
+              {/* user name here */}
+              {/* Hi, Kanyun Ngere */}
+            </span>
+          </li>
+
+          <li>
             <Link to="sign-in" className="main-nav__link">
               <span className="main-nav__icon">
                 <PiUserPlusFill />
@@ -61,6 +72,18 @@ const Navbar = () => {
               </span>
             </Link>
           </li>
+
+          {/* when authenticated, display signout button here */}
+          {/* <li>
+            <Link to="sign-in" className="main-nav__link">
+              <span className="main-nav__icon">
+                <PiUserMinusFill />
+              </span>
+              <span to="" className=" main-nav__sign-out">
+                Sign out
+              </span>
+            </Link>
+          </li> */}
 
           <li className="main-nav__item">
             <Link to="/cart" className="main-nav__link">
@@ -74,7 +97,7 @@ const Navbar = () => {
           </li>
 
           <li>
-            <Link to="">
+            <Link to="/dishes">
               <button className="btn">Order online</button>
             </Link>
           </li>
