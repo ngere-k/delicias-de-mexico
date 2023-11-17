@@ -1,0 +1,9 @@
+@mixin flex-vertical-center($gap) {
+  display: flex;
+  align-items: center;
+  gap: $gap;
+}
+
+@mixin transition-sm {
+  transition: all 0.3s;
+}
