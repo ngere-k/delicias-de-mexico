@@ -22,19 +22,42 @@ body {
   color: #555;
 }
 
+.heading-primary {
+  font-size: 4.4rem;
+  font-weight: 700;
+  color: #333;
+  line-height: 1.18;
+  letter-spacing: -0.5px;
+  margin-bottom: 3.2rem;
+}
+
+a {
+  text-decoration: none;
+}
+
 .btn {
-  font-size: 1.6rem;
-  font-weight: 500;
+  display: inline-block;
+  font-size: 2rem;
+  font-weight: 600;
   font-family: inherit;
   color: #fff;
-  text-transform: uppercase;
   border: none;
-  border-radius: 4px;
+  border-radius: 6px;
   cursor: pointer;
-  padding: 1.6rem 3.2rem;
+  padding: 1.2rem 3.2rem;
   background-color: #e67e22;
   transition: all 0.3s;
 }
 .btn:hover {
   background-color: #cf711f;
+}
+.btn--find {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  color: #555;
+  background-color: #fff;
+}
+.btn--find:hover {
+  background-color: transparent;
 }/*# sourceMappingURL=index.css.map */

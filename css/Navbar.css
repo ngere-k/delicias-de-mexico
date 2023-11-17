@@ -22,28 +22,51 @@ body {
   color: #555;
 }
 
+.heading-primary {
+  font-size: 4.4rem;
+  font-weight: 700;
+  color: #333;
+  line-height: 1.18;
+  letter-spacing: -0.5px;
+  margin-bottom: 3.2rem;
+}
+
+a {
+  text-decoration: none;
+}
+
 .btn {
-  font-size: 1.6rem;
-  font-weight: 500;
+  display: inline-block;
+  font-size: 2rem;
+  font-weight: 600;
   font-family: inherit;
   color: #fff;
-  text-transform: uppercase;
   border: none;
-  border-radius: 4px;
+  border-radius: 6px;
   cursor: pointer;
-  padding: 1.6rem 3.2rem;
+  padding: 1.2rem 3.2rem;
   background-color: #e67e22;
   transition: all 0.3s;
 }
 .btn:hover {
   background-color: #cf711f;
 }
+.btn--find {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  color: #555;
+  background-color: #fff;
+}
+.btn--find:hover {
+  background-color: transparent;
+}
 
 .header {
   display: grid;
   grid-template-columns: auto 1fr;
   align-items: center;
-  gap: 9.6rem;
+  gap: 4.8rem;
   padding: 1.6rem 4.8rem;
   background-color: #fdf2e9;
 }
@@ -55,6 +78,7 @@ body {
 .main-nav {
   display: flex;
   align-items: center;
+  gap: s;
   justify-content: space-between;
   font-size: 1.8rem;
   font-weight: 600;
@@ -68,6 +92,9 @@ body {
 }
 .main-nav__icon {
   font-size: 2.4rem;
+}
+.main-nav__user {
+  color: #555;
 }
 .main-nav__link {
   display: flex;
