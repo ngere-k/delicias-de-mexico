@@ -1,0 +1,49 @@
+@import "../../sass/abstracts/variable";
+@import "../../sass/abstracts/mixins";
+
+.section-hero {
+  background-color: $color-primary-light-1;
+  padding: 6.4rem 0;
+}
+
+.hero {
+  max-width: 130rem;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6.4rem;
+
+  &__text-container {
+  }
+
+  &__description {
+    font-size: 2rem;
+    line-height: 1.7;
+    margin-bottom: 6.4rem;
+  }
+
+  &__btn-container {
+    @include flex-vertical-center(1.6rem);
+  }
+
+  &__icon {
+    @include transition-sm;
+  }
+
+  &__btn-secondary:hover &__icon {
+    transform: translate(1rem);
+  }
+
+  &__image-container {
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  &__img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
