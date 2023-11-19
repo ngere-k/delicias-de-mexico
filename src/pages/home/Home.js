@@ -1,10 +1,14 @@
-import React from "react";
+import Hero from "../../components/hero/Hero";
 
 // styles
 import "./Home.scss";
 
 const Home = () => {
-  return <div>Home</div>;
+  return (
+    <main>
+      <Hero />
+    </main>
+  );
 };
 
 export default Home;
