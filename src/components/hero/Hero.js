@@ -18,8 +18,8 @@ const Hero = () => {
             If you are looking for a delicious and satisfying way to start your
             day, look no further than Delicias de Mexico. We offer a variety of
             traditional dishes that will make your mouth water and your stomach
-            happy. Come and join us at Delicias de Mexico, where you can
-            experience the flavors and culture of Mexico in every bite.
+            happy. Come and experience the flavors and culture of Mexico in
+            every bite.
           </p>
 
           <div className="hero__btn-container">
