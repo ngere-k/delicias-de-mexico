@@ -1,0 +1,19 @@
+@import "../../sass/abstracts/mixins";
+@import "../../sass/abstracts/variable";
+@import "../../sass/base/utilities";
+
+.section-featured {
+  padding: 2.4rem 0;
+  background-color: $color-primary-light-1;
+}
+
+.logos {
+  @include flex-vertical-center(8rem);
+  justify-content: center;
+
+  img {
+    height: 5.2rem;
+    filter: brightness(0);
+    opacity: 50%;
+  }
+}
