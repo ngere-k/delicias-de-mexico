@@ -10,7 +10,7 @@ const Featured = () => {
   return (
     <section className="section-featured">
       <div className="container">
-        <h2 className="heading-secondary featured-text-color text-center">
+        <h2 className="heading-secondary featured-text-color text-center margin-bt-md">
           Trusted by thousands of companies
         </h2>
         <div className="logos">
