@@ -6,8 +6,12 @@
   text-align: center;
 }
 
+.margin-bt-md {
+  margin-bottom: 2.4rem !important;
+}
+
 .section-featured {
-  padding: 2.4rem 0;
+  padding: 2.4rem 0 6.4rem 0;
   background-color: #fdf2e9;
 }
 
