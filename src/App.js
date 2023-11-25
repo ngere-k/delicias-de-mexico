@@ -1,4 +1,7 @@
+import { useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { fetchFoods } from "./features/foods/foodsSlice";
 
 // pages
 import Home from "./pages/home/Home";
@@ -17,6 +20,12 @@ import Error from "./pages/error/Error";
 import "./App.scss";
 
 function App() {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchFoods());
+  }, [dispatch]);
+
   return (
     <BrowserRouter>
       <Navbar />
