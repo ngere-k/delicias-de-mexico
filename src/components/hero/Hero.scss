@@ -3,7 +3,7 @@
 
 .section-hero {
   background-color: $color-primary-light-1;
-  padding: 9.6rem 0 6.4rem 0;
+  padding: 9.6rem 0 8rem 0;
 }
 
 .hero {
@@ -25,7 +25,7 @@
   }
 
   &__icon {
-    @include transition-sm;
+    @include transition;
   }
 
   &__btn-secondary:hover &__icon {
