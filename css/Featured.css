@@ -10,6 +10,10 @@
   margin-bottom: 2.4rem !important;
 }
 
+.font-size-md {
+  font-size: 3rem !important;
+}
+
 .section-featured {
   padding: 2.4rem 0 6.4rem 0;
   background-color: #fdf2e9;
