@@ -1,0 +1,81 @@
+@import "../../sass/abstracts/variable";
+@import "../../sass/abstracts/mixins";
+@import "../../sass/base/typography";
+
+.section-special {
+  padding: $section-padding;
+  background-color: $color-grey-light-1;
+  align-items: start;
+}
+
+.special {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4.8rem;
+
+  &__box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+  }
+
+  &__img-container {
+    height: 27rem;
+    overflow: hidden;
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    @include transition;
+  }
+
+  &__box:hover &__img {
+    transform: scale(1.05);
+  }
+
+  &__content {
+    text-align: center;
+    padding: 2.4rem;
+    background-color: $color-white;
+  }
+
+  &__title {
+    font-size: 2rem;
+    margin-bottom: 1.6rem;
+    font-weight: 500;
+    color: $color-primary-dark-6;
+
+    @include transition;
+  }
+
+  &__box:hover &__title {
+    color: $color-primary;
+  }
+
+  &__text {
+    font-size: 1.6rem;
+    line-height: 1.6;
+    margin-bottom: 2.4rem;
+    color: $color-primary-dark-4;
+
+    @include transition;
+  }
+
+  &__box:hover &__text {
+    color: $color-primary-dark-3;
+  }
+
+  &__price {
+    justify-content: center;
+    color: $color-primary-dark-5;
+
+    @include transition;
+  }
+
+  &__box:hover &__price {
+    color: $color-primary-dark-2;
+  }
+}
