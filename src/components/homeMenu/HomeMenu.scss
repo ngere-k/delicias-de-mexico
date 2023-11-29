@@ -1,53 +1,21 @@
 @import "../../sass/abstracts/variable";
+@import "../../sass/base/typography";
 
 .section-home-menu {
   padding: $section-padding;
+
+  background-image: linear-gradient(
+      to bottom right,
+      rgba($color-white, 0.8),
+      rgba($color-white, 0.8)
+    ),
+    url(../../assets/img/homeMenu.jpg);
+
+  background-size: cover;
 }
 
-.menu {
+.menu-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 6.4rem;
-
-  &__container {
-    display: grid;
-    grid-template-columns: auto 1fr auto;
-    column-gap: 2.4rem;
-    align-items: start;
-  }
-
-  &__img-box {
-    width: 11rem;
-    height: 11rem;
-
-    transform: translateY(-2rem);
-  }
-
-  &__img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 50%;
-  }
-
-  &__title {
-  }
-
-  &__price {
-  }
-
-  &__ingredients {
-    font-size: 1.6rem;
-    margin-top: -0.8rem;
-    color: $color-grey-dark-3;
-  }
-}
-
-.home-menu-container {
-  display: grid;
-  grid-template-columns: 1fr;
-  row-gap: 4.8rem;
-
-  justify-items: center;
-  align-items: center;
 }
