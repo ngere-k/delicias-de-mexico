@@ -1,0 +1,1 @@
+{"version":3,"sources":["../src/components/foodMenu/FoodMenu.scss","FoodMenu.css","../src/sass/abstracts/_variable.scss"],"names":[],"mappings":"AAEA;EACE,aAAA;EACA,oCAAA;EACA,uBAAA;OAAA,kBAAA;EACA,kBAAA;ACDF;ADGE;EAKE,YAAA;EACA,aAAA;EACA,8BAAA;ACLJ;ADQE;EACE,WAAA;EACA,YAAA;EACA,oBAAA;KAAA,iBAAA;EACA,kBAAA;ACNJ;ADSE;EACE,iBAAA;EACA,mBAAA;EACA,WEXgB;ADIpB","file":"FoodMenu.css"}
