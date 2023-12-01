@@ -1,41 +1,110 @@
-.section-home-menu {
-  padding: 9.6rem 0;
+body {
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+  line-height: 1.2;
+  color: #555;
 }
 
-.menu {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 6.4rem;
-}
-.menu__container {
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  -moz-column-gap: 2.4rem;
-       column-gap: 2.4rem;
-  align-items: start;
-}
-.menu__img-box {
-  width: 11rem;
-  height: 11rem;
-  transform: translateY(-2rem);
-}
-.menu__img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  border-radius: 50%;
-}
-.menu__ingredients {
-  font-size: 1.6rem;
-  margin-top: -0.8rem;
-  color: #888;
+.container {
+  max-width: 120rem;
+  margin: 0 auto;
 }
 
-.home-menu-container {
+.grid-centered-container {
   display: grid;
   grid-template-columns: 1fr;
   row-gap: 4.8rem;
   justify-items: center;
   align-items: center;
+}
+
+.heading-primary,
+.heading-secondary,
+.heading-tertiary {
+  font-weight: 700;
+  color: #333;
+}
+
+.heading-primary {
+  font-size: 5.2rem;
+  line-height: 1.18;
+  letter-spacing: -0.5px;
+  margin-bottom: 2.4rem;
+}
+
+.heading-secondary {
+  font-size: 3.6rem;
+  margin-bottom: 4.8rem;
+}
+
+.heading-tertiary {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 1.6rem;
+}
+
+.subheading {
+  display: inline-block;
+  text-transform: uppercase;
+  color: #e67e22;
+  font-weight: 500;
+  font-size: 1.4rem;
+  letter-spacing: 2px;
+  margin-bottom: 0.8rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn {
+  display: inline-block;
+  font-size: 2rem;
+  font-weight: 600;
+  font-family: inherit;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  padding: 1.2rem 3.2rem;
+  background-color: #e67e22;
+  transition: all 0.3s;
+}
+.btn:hover {
+  background-color: #cf711f;
+}
+.btn--find {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  color: #555;
+  background-color: #fff;
+}
+.btn--find:hover {
+  background-color: transparent;
+}
+
+.price__container {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+  font-weight: 500;
+}
+.price__icon {
+  font-size: 1.8rem;
+}
+.price__amount {
+  font-size: 1.6rem;
+}
+
+.section-home-menu {
+  padding: 9.6rem 0;
+  background-image: linear-gradient(to bottom right, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url(../../assets/img/homeMenu.jpg);
+  background-size: cover;
+}
+
+.menu-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6.4rem;
 }/*# sourceMappingURL=HomeMenu.css.map */
