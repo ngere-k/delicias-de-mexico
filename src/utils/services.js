@@ -1,5 +1,9 @@
-import { PiBowlFoodFill, PiWifiHighFill, PiTruckFill } from "react-icons/pi";
-import { FaGrinTongue } from "react-icons/fa";
+import {
+  PiBowlFoodFill,
+  PiWifiHighFill,
+  PiHeartFill,
+  PiTruckFill,
+} from "react-icons/pi";
 
 export const services = [
   {
@@ -11,7 +15,7 @@ export const services = [
 
   {
     id: 2,
-    icon: <FaGrinTongue />,
+    icon: <PiHeartFill />,
     title: "super taste",
     text: "Super taste that is unmatched by any other, with dishes that are flavorful, aromatic, and mouth-watering",
   },
