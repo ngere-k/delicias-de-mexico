@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { fetchFoods } from "./features/foods/foodsSlice";
+import { fetchReviews } from "./features/reviews/reviewsSlice";
 
 // pages
 import Home from "./pages/home/Home";
@@ -24,6 +25,10 @@ function App() {
 
   useEffect(() => {
     dispatch(fetchFoods());
+  }, [dispatch]);
+
+  useEffect(() => {
+    dispatch(fetchReviews());
   }, [dispatch]);
 
   return (
