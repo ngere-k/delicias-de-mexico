@@ -10,10 +10,6 @@
   background-color: $color-primary-light-1;
 }
 
-.logo {
-  height: 5.2rem;
-}
-
 .main-nav {
   @include flex-vertical-center(s);
   justify-content: space-between;
