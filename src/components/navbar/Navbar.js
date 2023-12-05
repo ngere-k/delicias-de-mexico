@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
-import logo from "../../assets/img/logo.png";
+import Logo from "../../logo/Logo";
 import {
   PiUserPlusFill,
   PiUserMinusFill,
@@ -14,7 +14,7 @@ const Navbar = () => {
   return (
     <header className="header">
       <Link to="/">
-        <img className="logo" src={logo} alt="delicias de mexico logo" />
+        <Logo />
       </Link>
 
       <nav className="main-nav">
