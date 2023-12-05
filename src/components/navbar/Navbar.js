@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
-import Logo from "../../logo/Logo";
+import Logo from "../../components/logo/Logo";
 import {
   PiUserPlusFill,
   PiUserMinusFill,
