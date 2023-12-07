@@ -1,3 +1,43 @@
 .section-home-testimonials {
   padding: 9.6rem 0;
+}
+
+.reviews {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  gap: 4.8rem;
+}
+
+.read-more {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 6.4rem;
+}
+.read-more__link {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 1.6rem;
+  text-align: center;
+}
+.read-more__btn {
+  border: none;
+  font-size: inherit;
+  font-family: inherit;
+  background-color: transparent;
+  color: #333;
+  font-weight: 400;
+  cursor: pointer;
+}
+.read-more__btn, .read-more__icon {
+  color: #333;
+  transition: all 0.3s;
+  backface-visibility: hidden;
+}
+.read-more__link:hover .read-more__btn {
+  text-decoration: underline;
+}
+.read-more__link:hover .read-more__icon {
+  transform: translateX(4px);
 }/*# sourceMappingURL=HomeTestimonials.css.map */
