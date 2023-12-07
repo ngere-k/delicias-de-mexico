@@ -12,9 +12,7 @@ import "./Navbar.scss";
 const Navbar = () => {
   return (
     <header className="header">
-      <Link to="/">
-        <Logo />
-      </Link>
+      <Logo />
 
       <nav className="main-nav">
         <ul className="main-nav__list-1">
@@ -62,37 +60,37 @@ const Navbar = () => {
           </li>
 
           <li>
-            <Link to="sign-in" className="main-nav__link">
+            <NavLink to="sign-in" className="main-nav__link">
               <span className="main-nav__icon">
                 <PiUserPlusFill />
               </span>
               <span to="" className=" main-nav__sign-in">
                 Sign in
               </span>
-            </Link>
+            </NavLink>
           </li>
 
           {/* when authenticated, display signout button here */}
           {/* <li>
-            <Link to="sign-in" className="main-nav__link">
+            <NavLink to="sign-in" className="main-nav__link">
               <span className="main-nav__icon">
                 <PiUserMinusFill />
               </span>
               <span to="" className=" main-nav__sign-out">
                 Sign out
               </span>
-            </Link>
+            </NavLink>
           </li> */}
 
           <li className="main-nav__item">
-            <Link to="/cart" className="main-nav__link">
+            <NavLink to="/cart" className="main-nav__link">
               <span className="main-nav__icon">
                 <PiShoppingCartFill />
               </span>
               <span to="" className="main-nav__cart">
                 Cart
               </span>
-            </Link>
+            </NavLink>
           </li>
 
           <li>
