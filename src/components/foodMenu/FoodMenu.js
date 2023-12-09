@@ -19,7 +19,7 @@ const FoodMenu = ({ id, image, title }) => {
         <div>
           <PiCurrencyNgn className="price__icon" />
         </div>
-        <p className="price__amount">4,000.00</p>
+        <p className="price__amount">10,000.00</p>
       </div>
     </div>
   );
