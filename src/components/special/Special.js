@@ -45,7 +45,7 @@ const Special = () => {
                     <div>
                       <PiCurrencyNgn className="price__icon" />
                     </div>
-                    <p className="price__amount">4,500.00</p>
+                    <p className="price__amount">12,500.00</p>
                   </div>
                 </div>
               </div>
