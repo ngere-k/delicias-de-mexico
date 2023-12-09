@@ -16,6 +16,7 @@ import Dishes from "./pages/dishes/Dishes";
 import DishesInfo from "./pages/dishesInfo/DishesInfo";
 import Navbar from "./components/navbar/Navbar";
 import Error from "./pages/error/Error";
+import Footer from "./components/footer/Footer";
 
 // styles
 import "./App.scss";
@@ -46,6 +47,7 @@ function App() {
         <Route path="dishes/:id" element={<DishesInfo />} />
         <Route path="*" element={<Error />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 }
