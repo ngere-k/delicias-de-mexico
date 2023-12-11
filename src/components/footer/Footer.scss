@@ -4,7 +4,7 @@
 .footer {
   padding: $section-padding;
   padding-bottom: 3.2rem;
-  background-color: $color-grey-light-1;
+  background-color: $color-primary-light-1;
 
   &__grid {
     display: grid;
@@ -141,6 +141,10 @@
     &:link,
     &:visited {
       color: inherit;
+    }
+
+    &:hover {
+      text-decoration: underline;
     }
   }
 
