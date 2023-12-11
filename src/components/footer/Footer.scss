@@ -160,7 +160,8 @@
     }
 
     &-link:hover {
-      background-color: $color-white;
+      background-color: #f8d8bd;
+      transform: translateY(-1.5px);
     }
   }
 
