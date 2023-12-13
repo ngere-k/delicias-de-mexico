@@ -21,7 +21,7 @@ export const fetchFoods = createAsyncThunk(
       return res.data;
     } catch (error) {
       console.log(error.response);
-      return rejectWithValue(error.response);
+      return rejectWithValue(error.response.data.message);
     }
   }
 );
