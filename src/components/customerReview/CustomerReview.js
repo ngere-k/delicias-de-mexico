@@ -21,7 +21,7 @@ const CustomerReview = ({ id, name, text, image }) => {
         </div>
       </div>
 
-      <p className="review__text">{text}</p>
+      <blockquote className="review__text">{text}</blockquote>
     </div>
   );
 };
