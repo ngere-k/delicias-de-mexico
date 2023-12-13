@@ -99,6 +99,7 @@ a {
 }
 .btn--find:hover {
   background-color: transparent;
+  box-shadow: inset 0 0 0 4px #fff;
 }
 
 .price__container {
