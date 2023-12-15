@@ -1,15 +1,16 @@
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { PiArrowRight } from "react-icons/pi";
 import CustomerReview from "../customerReview/CustomerReview";
+import { openReview } from "../../features/modal/modalSlice";
 
 // styles
 import "./HomeTestimonials.scss";
 
 const HomeTestimonials = () => {
   const { reviews, isLoading, error } = useSelector((store) => store.reviews);
-
   const reviewsSlice = reviews?.slice(0, 3);
+  const dispatch = useDispatch();
 
   if (isLoading) {
     return <div>Loading..</div>;
@@ -34,7 +35,10 @@ const HomeTestimonials = () => {
         </div>
 
         <div className="read-more">
-          <Link className="read-more__link">
+          <Link
+            className="read-more__link"
+            onClick={() => dispatch(openReview())}
+          >
             <button className="read-more__btn">
               Read more customer reviews
             </button>
