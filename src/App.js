@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { fetchFoods } from "./features/foods/foodsSlice";
 import { fetchReviews } from "./features/reviews/reviewsSlice";
+import Testimonials from "./components/testimonials/Testimonials";
 
 // pages
 import Home from "./pages/home/Home";
@@ -48,6 +49,7 @@ function App() {
         <Route path="*" element={<Error />} />
       </Routes>
       <Footer />
+      <Testimonials />
     </BrowserRouter>
   );
 }
