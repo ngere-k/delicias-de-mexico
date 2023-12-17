@@ -1,1 +1,33 @@
-/*# sourceMappingURL=Error.css.map */
+.section-error {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #faf9f9;
+  padding: 2.4rem;
+}
+
+.error {
+  max-width: 70rem;
+}
+.error__img {
+  display: block;
+  width: 40vw;
+  margin-bottom: 3.2rem;
+}
+.error__content {
+  font-size: 1.6rem;
+}
+.error__text:not(:last-child) {
+  line-height: 1.7;
+}
+.error__btn {
+  border: none;
+  background-color: transparent;
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: 1.6rem;
+  text-decoration: underline;
+  color: #e67e22;
+  margin-top: 3.2rem;
+  cursor: pointer;
+}/*# sourceMappingURL=Error.css.map */
