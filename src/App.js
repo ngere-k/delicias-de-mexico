@@ -4,6 +4,7 @@ import { useDispatch } from "react-redux";
 import { fetchFoods } from "./features/foods/foodsSlice";
 import { fetchReviews } from "./features/reviews/reviewsSlice";
 import Testimonials from "./components/testimonials/Testimonials";
+import { ToastContainer } from "react-toastify";
 
 // pages
 import Home from "./pages/home/Home";
@@ -21,6 +22,7 @@ import Footer from "./components/footer/Footer";
 
 // styles
 import "./App.scss";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   const dispatch = useDispatch();
@@ -50,6 +52,7 @@ function App() {
       </Routes>
       <Footer />
       <Testimonials />
+      <ToastContainer position="top-center" />
     </BrowserRouter>
   );
 }
