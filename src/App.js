@@ -52,7 +52,7 @@ function App() {
       </Routes>
       <Footer />
       <Testimonials />
-      <ToastContainer position="top-center" />
+      <ToastContainer position="top-center" className="toastStyle" />
     </BrowserRouter>
   );
 }
