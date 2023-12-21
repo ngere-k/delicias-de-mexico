@@ -8,11 +8,11 @@ const FooterForm = () => {
     e.preventDefault();
 
     if (!email) {
-      toast.error("Please fill in the email field!");
+      toast.error("Please fill out the email field.");
       return;
     }
 
-    toast.success("You have successfully subscribe to our newsletter!");
+    toast.success("You've successfully subscribed.");
     setEmail("");
   };
 
