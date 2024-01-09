@@ -6,6 +6,9 @@ import { fetchReviews } from "./features/reviews/reviewsSlice";
 import Testimonials from "./components/testimonials/Testimonials";
 import { ToastContainer } from "react-toastify";
 
+// components
+import Footer from "./components/footer/Footer";
+
 // pages
 import Home from "./pages/home/Home";
 import About from "./pages/about/About";
@@ -18,7 +21,7 @@ import Dishes from "./pages/dishes/Dishes";
 import DishesInfo from "./pages/dishesInfo/DishesInfo";
 import Navbar from "./components/navbar/Navbar";
 import Error from "./pages/error/Error";
-import Footer from "./components/footer/Footer";
+import Contact from "./pages/contact/Contact";
 
 // styles
 import "./App.scss";
@@ -46,6 +49,7 @@ function App() {
         <Route path="reservation" element={<Reservation />} />
         <Route path="cart" element={<Cart />} />
         <Route path="sign-in" element={<Signin />} />
+        <Route path="contact" element={<Contact />} />
         <Route path="dishes" element={<Dishes />} />
         <Route path="dishes/:id" element={<DishesInfo />} />
         <Route path="*" element={<Error />} />
