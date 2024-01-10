@@ -1,3 +1,7 @@
+.article-about {
+  background-color: #faf9f9;
+}
+
 .about {
   display: grid;
   grid-template-columns: 1fr 1fr;
