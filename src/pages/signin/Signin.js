@@ -1,4 +1,4 @@
-import React from "react";
+import InputRow from "../../components/inputRow/InputRow";
 
 // styles
 import "./Signin.scss";
@@ -12,20 +12,9 @@ const Signin = () => {
         </div>
 
         <div className="form__content">
-          <label className="form__box">
-            <span className="form__name">Name</span>
-            <input type="text" className="form__input" />
-          </label>
-
-          <label className="form__box">
-            <span className="form__name">Email</span>
-            <input type="email" className="form__input" />
-          </label>
-
-          <label className="form__box">
-            <span className="form__name">Password</span>
-            <input type="password" className="form__input" />
-          </label>
+          <InputRow type="text" name="user name" />
+          <InputRow type="email" name="email" />
+          <InputRow type="password" name="password" />
         </div>
 
         <div className="form__btn-box">
