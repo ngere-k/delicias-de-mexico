@@ -4,6 +4,12 @@
   gap: $gap;
 }
 
+@mixin flex-column($gap) {
+  display: flex;
+  flex-direction: column;
+  gap: $gap;
+}
+
 @mixin transition {
   transition: all 0.3s;
 }
