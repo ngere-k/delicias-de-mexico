@@ -1,0 +1,29 @@
+@import "../../sass/abstracts/variable";
+@import "../../sass/abstracts/mixins";
+
+.select {
+  &__box {
+    @include flex-column(1.2rem);
+  }
+
+  &__label {
+    text-transform: capitalize;
+    font-size: 2rem;
+  }
+
+  &__field {
+    font-family: inherit;
+    font-weight: inherit;
+    color: inherit;
+    font-size: 1.8rem;
+    padding: 1.2rem 1.6rem;
+    outline: none;
+    border-radius: 4px;
+    @include transition;
+
+    &:focus {
+      border: 1px solid $color-primary;
+      background-color: #eee;
+    }
+  }
+}
