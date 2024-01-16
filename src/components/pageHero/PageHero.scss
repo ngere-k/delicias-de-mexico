@@ -1,0 +1,21 @@
+@import "../../sass/abstracts/variable";
+
+.page-hero {
+  position: relative;
+  height: 45vh;
+  background-size: cover;
+  background-position: center;
+
+  &__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  &__heading {
+    font-size: 3.6rem;
+    color: $color-white;
+  }
+}
