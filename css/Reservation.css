@@ -1,1 +1,15 @@
-/*# sourceMappingURL=Reservation.css.map */
+.reservation__hero {
+  background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../../assets/img/reserve.jpg");
+}
+.reservation__form {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  row-gap: 3.2rem;
+  -moz-column-gap: 2.4rem;
+       column-gap: 2.4rem;
+  padding: 8rem 0;
+}
+.reservation__btn-box {
+  grid-column: 2/3;
+}/*# sourceMappingURL=Reservation.css.map */

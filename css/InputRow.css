@@ -17,6 +17,12 @@
   border-radius: 4px;
   transition: all 0.3s;
 }
+.input__field::-moz-placeholder {
+  color: #aaa;
+}
+.input__field::placeholder {
+  color: #aaa;
+}
 .input__field:focus {
   border: 1px solid #e67e22;
   background-color: #eee;
