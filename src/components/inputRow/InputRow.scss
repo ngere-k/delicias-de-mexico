@@ -21,6 +21,10 @@
     border-radius: 4px;
     @include transition;
 
+    &::placeholder {
+      color: $color-grey-dark-4;
+    }
+
     &:focus {
       border: 1px solid $color-primary;
       background-color: #eee;
