@@ -1,1 +1,17 @@
-/*# sourceMappingURL=Menu.css.map */
+.menu-page {
+  background-color: #faf9f9;
+}
+.menu-page__hero {
+  background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../../assets/img/menu.jpg");
+}
+.menu-page__content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  -moz-column-gap: 4.8rem;
+       column-gap: 4.8rem;
+  row-gap: 3.2rem;
+  padding: 8rem 0;
+  padding-left: 4.8rem;
+  padding-right: 4.8rem;
+  background-color: #fff;
+}/*# sourceMappingURL=Menu.css.map */
