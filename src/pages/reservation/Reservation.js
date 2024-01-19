@@ -35,6 +35,7 @@ const Reservation = () => {
       <PageHero
         subheading="reservation"
         heading=" Book your spot for a delicious Mexican breakfast"
+        heroClass="reservation__hero"
       />
 
       <form className="container reservation__form" onSubmit={handleSubmit}>
