@@ -7,7 +7,7 @@ import "./Menu.scss";
 
 const Menu = () => {
   const { foods, isLoading, error } = useSelector((store) => store.foods);
-  const foodsSlice = foods.slice(23, 29);
+  const foodsSlice = foods.slice(8, 22);
 
   if (isLoading) {
     return <h2>Loading...</h2>;
@@ -25,10 +25,12 @@ const Menu = () => {
         heroClass="menu-page__hero"
       />
 
-      <div className="menu-page__content container">
-        {foodsSlice.map((food) => {
-          return <FoodMenu key={food.id} {...food} />;
-        })}
+      <div className="container">
+        <div className="menu-page__content">
+          {foodsSlice.map((food) => {
+            return <FoodMenu key={food.id} {...food} />;
+          })}
+        </div>
       </div>
     </article>
   );
