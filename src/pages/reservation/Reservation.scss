@@ -1,11 +1,8 @@
+@import "../../sass/abstracts/mixins";
+
 .reservation {
   &__hero {
-    background-image: linear-gradient(
-        to bottom right,
-        rgba(0, 0, 0, 0.2),
-        rgba(0, 0, 0, 0.2)
-      ),
-      url("../../assets/img/reserve.jpg");
+    @include hero-background("../../assets/img/reserve.jpg");
   }
 
   &__form {
@@ -14,8 +11,7 @@
     align-items: center;
     row-gap: 3.2rem;
     column-gap: 2.4rem;
-
-    padding: 8rem 0;
+    margin: 8rem 0;
   }
 
   &__btn-box {
