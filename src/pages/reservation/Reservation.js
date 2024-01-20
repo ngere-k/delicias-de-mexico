@@ -38,61 +38,63 @@ const Reservation = () => {
         heroClass="reservation__hero"
       />
 
-      <form className="container reservation__form" onSubmit={handleSubmit}>
-        {/* name */}
-        <InputRow
-          type="text"
-          name="name"
-          value={name}
-          placeholder="Your full name"
-          handleChange={(e) => setName(e.target.value)}
-        />
-        {/* email */}
-        <InputRow
-          type="email"
-          name="email"
-          value={email}
-          placeholder="Your email address"
-          handleChange={(e) => setEmail(e.target.value)}
-        />
-        {/* phone */}
-        <InputRow
-          type="tel"
-          name="phone"
-          value={phone}
-          placeholder="Your phone"
-          handleChange={(e) => setPhone(e.target.value)}
-        />
-        {/* number of people */}
-        <InputSelect
-          label="we are"
-          name="people"
-          array={people}
-          value={numPeople}
-          handleChange={(e) => setNumPeople(e.target.value)}
-        />
-        {/* date */}
-        <InputRow
-          type="date"
-          name="date"
-          value={date}
-          handleChange={(e) => setDate(e.target.value)}
-        />
-        {/* time */}
-        <InputSelect
-          label="time"
-          name="time"
-          array={times}
-          value={time}
-          handleChange={(e) => setTime(e.target.value)}
-        />
+      <div className="container">
+        <form className="reservation__form" onSubmit={handleSubmit}>
+          {/* name */}
+          <InputRow
+            type="text"
+            name="name"
+            value={name}
+            placeholder="Your full name"
+            handleChange={(e) => setName(e.target.value)}
+          />
+          {/* email */}
+          <InputRow
+            type="email"
+            name="email"
+            value={email}
+            placeholder="Your email address"
+            handleChange={(e) => setEmail(e.target.value)}
+          />
+          {/* phone */}
+          <InputRow
+            type="tel"
+            name="phone"
+            value={phone}
+            placeholder="Your phone"
+            handleChange={(e) => setPhone(e.target.value)}
+          />
+          {/* number of people */}
+          <InputSelect
+            label="we are"
+            name="people"
+            array={people}
+            value={numPeople}
+            handleChange={(e) => setNumPeople(e.target.value)}
+          />
+          {/* date */}
+          <InputRow
+            type="date"
+            name="date"
+            value={date}
+            handleChange={(e) => setDate(e.target.value)}
+          />
+          {/* time */}
+          <InputSelect
+            label="time"
+            name="time"
+            array={times}
+            value={time}
+            handleChange={(e) => setTime(e.target.value)}
+          />
 
-        <div className="reservation__btn-box">
-          <button type="submit" className="btn btn--block">
-            Reserve a table
-          </button>
-        </div>
-      </form>
+          <div className="reservation__btn-box">
+            <button type="submit" className="btn btn--block">
+              Reserve a table
+            </button>
+          </div>
+        </form>
+      </div>
     </article>
   );
 };
