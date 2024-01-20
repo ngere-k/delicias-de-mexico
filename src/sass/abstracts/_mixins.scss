@@ -13,3 +13,12 @@
 @mixin transition {
   transition: all 0.3s;
 }
+
+@mixin hero-background($url) {
+  background-image: linear-gradient(
+      to bottom right,
+      rgba(0, 0, 0, 0.2),
+      rgba(0, 0, 0, 0.2)
+    ),
+    url($url);
+}
