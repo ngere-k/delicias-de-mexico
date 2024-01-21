@@ -1,4 +1,4 @@
-import AboutImg from "../../assets/img/about.jpg";
+import AboutImg from "../../assets/img/menu.jpg";
 
 // styles
 import "./About.scss";
