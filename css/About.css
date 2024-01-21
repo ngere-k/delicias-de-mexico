@@ -1,11 +1,11 @@
 .article-about {
   background-color: #faf9f9;
+  padding: 8rem 0;
 }
 
 .about {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  align-items: center;
   gap: 6.4rem;
 }
 .about__paragraphs {
@@ -16,7 +16,6 @@
   gap: 1.6rem;
 }
 .about__img-box {
-  height: 75%;
   border-radius: 4px;
   overflow: hidden;
 }

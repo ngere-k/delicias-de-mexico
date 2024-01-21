@@ -104,7 +104,7 @@ a {
 
 .section-home-menu {
   padding: 9.6rem 0;
-  background-image: linear-gradient(to bottom right, rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url(../../assets/img/homeMenu.jpg);
+  background-image: linear-gradient(to bottom right, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url(../../assets/img/homeMenu.jpg);
   background-size: cover;
 }
 
