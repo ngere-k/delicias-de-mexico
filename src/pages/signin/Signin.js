@@ -28,11 +28,12 @@ const Signin = () => {
 
     if (isAlreadySignedIn) {
       console.log("sign in", { email, password });
-
+      setState(initialState);
       return;
     }
 
     console.log("register", { username, email, password });
+    setState({ ...initialState, isAlreadySignedIn: false });
   };
 
   const toggleMember = () => {
