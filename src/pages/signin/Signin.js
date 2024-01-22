@@ -37,12 +37,7 @@ const Signin = () => {
   };
 
   const toggleMember = () => {
-    setState({
-      username: "",
-      email: "",
-      password: "",
-      isAlreadySignedIn: false,
-    });
+    setState({ ...state, isAlreadySignedIn: !state.isAlreadySignedIn });
   };
 
   return (
