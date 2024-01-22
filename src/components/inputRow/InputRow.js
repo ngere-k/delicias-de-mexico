@@ -7,10 +7,11 @@ const InputRow = ({ type, placeholder, name, handleChange, value }) => {
       <span className="input__name">{name}</span>
       <input
         type={type}
-        className="input__field"
+        name={name}
         value={value}
         onChange={handleChange}
         placeholder={placeholder}
+        className="input__field"
         required
       />
     </label>
