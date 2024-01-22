@@ -1,6 +1,6 @@
 .sign-in {
   background-color: #faf9f9;
-  padding: 9.6rem 0;
+  padding: 8rem 0;
 }
 
 .form {
@@ -8,10 +8,34 @@
   margin: 0 auto;
   padding: 4.8rem;
   background-color: #fff;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+.form__heading {
+  text-align: center;
 }
 .form__content {
   display: flex;
   flex-direction: column;
   gap: 3.2rem;
-  margin-bottom: 3.2rem;
+  margin-bottom: 4.8rem;
+}
+.form__btn-box {
+  margin-bottom: 2.4rem;
+}
+.form__paragraph {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 1.6rem;
+}
+.form__toggle {
+  display: inline-block;
+  font-weight: 500;
+  font-size: 1.6rem;
+  font-family: inherit;
+  border: none;
+  cursor: pointer;
+  letter-spacing: 1.05px;
+  background-color: transparent;
 }/*# sourceMappingURL=Signin.css.map */
