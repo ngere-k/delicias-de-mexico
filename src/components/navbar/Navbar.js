@@ -5,11 +5,15 @@ import {
   PiUserMinusFill,
   PiShoppingCartFill,
 } from "react-icons/pi";
+import { useSelector, useDispatch } from "react-redux";
 
 // styles
 import "./Navbar.scss";
+import { signOutUser } from "../../features/user/userSlice";
 
 const Navbar = () => {
+  const { user } = useSelector((store) => store.user);
+  const dispatch = useDispatch();
   return (
     <header className="header">
       <Logo />
@@ -59,28 +63,36 @@ const Navbar = () => {
             </span>
           </li>
 
-          <li>
-            <NavLink to="sign-in" className="main-nav__link">
-              <span className="main-nav__icon">
-                <PiUserPlusFill />
-              </span>
-              <span to="" className=" main-nav__sign-in">
-                Sign in
-              </span>
-            </NavLink>
-          </li>
+          {!user && (
+            <li>
+              <NavLink to="sign-in" className="main-nav__link">
+                <span className="main-nav__icon">
+                  <PiUserPlusFill />
+                </span>
+                <span to="" className=" main-nav__sign-in">
+                  Sign in
+                </span>
+              </NavLink>
+            </li>
+          )}
 
           {/* when authenticated, display signout button here */}
-          {/* <li>
-            <NavLink to="sign-in" className="main-nav__link">
-              <span className="main-nav__icon">
-                <PiUserMinusFill />
-              </span>
-              <span to="" className=" main-nav__sign-out">
-                Sign out
-              </span>
-            </NavLink>
-          </li> */}
+          {user && (
+            <li>
+              <NavLink
+                to="sign-in"
+                className="main-nav__link"
+                onClick={() => dispatch(signOutUser())}
+              >
+                <span className="main-nav__icon">
+                  <PiUserMinusFill />
+                </span>
+                <span to="" className=" main-nav__sign-out">
+                  Sign out
+                </span>
+              </NavLink>
+            </li>
+          )}
 
           <li className="main-nav__item">
             <NavLink to="/cart" className="main-nav__link">
