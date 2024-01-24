@@ -1,0 +1,93 @@
+import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import {
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+  updateProfile,
+  signOut,
+} from "firebase/auth";
+import { auth } from "../../firebase/config";
+import { toast } from "react-toastify";
+
+const initialState = {
+  user: null,
+  error: null,
+  isLoading: false,
+};
+
+// register user
+export const registerUser = createAsyncThunk(
+  "user/registerUser",
+  async ({ username, email, password }, { rejectWithValue }) => {
+    try {
+      const res = await createUserWithEmailAndPassword(auth, email, password);
+      await updateProfile(res.user, { displayName: username });
+      return res.user;
+    } catch (error) {
+      return rejectWithValue(error.message);
+    }
+  }
+);
+// sign in user
+export const signInUser = createAsyncThunk(
+  "user/signInUser",
+  async ({ email, password }, { rejectWithValue }) => {
+    try {
+      const res = await signInWithEmailAndPassword(auth, email, password);
+      return res.user;
+    } catch (error) {
+      return rejectWithValue(error.message);
+    }
+  }
+);
+// sign out user
+export const signOutUser = createAsyncThunk("user/signOutUser", async () => {
+  try {
+    await signOut(auth);
+    console.log("sign out user");
+  } catch (error) {
+    console.log("error signing out");
+  }
+});
+
+const userSlice = createSlice({
+  name: "user",
+  initialState,
+  extraReducers: (builder) => {
+    builder
+      // register user
+      .addCase(registerUser.pending, (state) => {
+        state.isLoading = true;
+      })
+      .addCase(registerUser.fulfilled, (state, action) => {
+        state.isLoading = false;
+        state.error = null;
+        state.user = action.payload;
+      })
+      .addCase(registerUser.rejected, (state, action) => {
+        state.isLoading = false;
+        state.error = action.payload;
+      })
+      // sign in user
+      .addCase(signInUser.pending, (state) => {
+        state.isLoading = true;
+      })
+      .addCase(signInUser.fulfilled, (state, action) => {
+        state.isLoading = false;
+        state.error = null;
+        state.user = action.payload;
+      })
+      .addCase(signInUser.rejected, (state, action) => {
+        state.isLoading = false;
+        state.error = action.payload;
+      })
+      // sign out user
+      .addCase(signOutUser.fulfilled, (state) => {
+        state.isLoading = false;
+        state.error = null;
+        state.user = null;
+      });
+  },
+});
+
+const userReducer = userSlice.reducer;
+export default userReducer;
