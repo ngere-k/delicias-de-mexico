@@ -1,5 +1,7 @@
 import { useState } from "react";
+import { useDispatch } from "react-redux";
 import InputRow from "../../components/inputRow/InputRow";
+import { registerUser, signInUser } from "../../features/user/userSlice";
 
 // styles
 import "./Signin.scss";
@@ -8,11 +10,12 @@ const initialState = {
   username: "",
   email: "",
   password: "",
-  isAlreadySignedIn: true,
+  isAlreadyMember: true,
 };
 
 const Signin = () => {
   const [state, setState] = useState(initialState);
+  const dispatch = useDispatch();
 
   const handleChange = (e) => {
     const name = e.target.name;
@@ -24,20 +27,20 @@ const Signin = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const { username, email, password, isAlreadySignedIn } = state;
+    const { username, email, password, isAlreadyMember } = state;
 
-    if (isAlreadySignedIn) {
-      console.log("sign in", { email, password });
+    if (isAlreadyMember) {
+      dispatch(signInUser({ email, password }));
       setState(initialState);
       return;
     }
 
-    console.log("register", { username, email, password });
-    setState({ ...initialState, isAlreadySignedIn: false });
+    dispatch(registerUser({ username, email, password }));
+    setState({ ...initialState, isAlreadyMember: false });
   };
 
   const toggleMember = () => {
-    setState({ ...state, isAlreadySignedIn: !state.isAlreadySignedIn });
+    setState({ ...state, isAlreadyMember: !state.isAlreadyMember });
   };
 
   return (
@@ -45,12 +48,13 @@ const Signin = () => {
       <form className="form" onSubmit={handleSubmit}>
         <div className="form__heading">
           <h2 className="heading-secondary">
-            {state.isAlreadySignedIn ? "Sign In" : "Register"}
+            {state.isAlreadyMember ? "Sign In" : "Register"}
           </h2>
         </div>
 
         <div className="form__content">
-          {!state.isAlreadySignedIn && (
+          {/* user name */}
+          {!state.isAlreadyMember && (
             <InputRow
               type="text"
               name="username"
@@ -58,14 +62,14 @@ const Signin = () => {
               handleChange={handleChange}
             />
           )}
-
+          {/* email */}
           <InputRow
             type="email"
             name="email"
             value={state.email}
             handleChange={handleChange}
           />
-
+          {/* password */}
           <InputRow
             type="password"
             name="password"
@@ -76,16 +80,16 @@ const Signin = () => {
 
         <div className="form__btn-box">
           <button type="submit" className="btn btn--block">
-            {state.isAlreadySignedIn ? "Sign in" : "Register"}
+            {state.isAlreadyMember ? "Sign in" : "Register"}
           </button>
         </div>
 
         <p className="form__paragraph">
-          {!state.isAlreadySignedIn
+          {!state.isAlreadyMember
             ? "Already have an account?"
             : "Don't have an account yet?"}
           <button type="button" onClick={toggleMember} className="form__toggle">
-            {state.isAlreadySignedIn ? "Register" : "Sign in"}
+            {state.isAlreadyMember ? "Register" : "Sign in"}
           </button>
         </p>
       </form>
