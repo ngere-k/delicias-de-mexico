@@ -21,13 +21,17 @@
   flex-direction: column;
   gap: 2.4rem;
 
-  padding: 3.2rem 4.8rem;
-  height: 94vh;
+  width: 57%;
+  height: 95vh;
   overflow-y: scroll;
-  max-width: 90rem;
-  margin: 5rem auto;
-  z-index: 99999;
+  padding: 3.2rem 4.8rem;
   background-color: $color-white;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 99999;
 
   &__btn-box {
     align-self: flex-end;
