@@ -62,10 +62,14 @@ const userSlice = createSlice({
         state.isLoading = false;
         state.error = null;
         state.user = action.payload;
+        toast.success(
+          `Hello ${state.user.displayName}, You have successfully registered.`
+        );
       })
       .addCase(registerUser.rejected, (state, action) => {
         state.isLoading = false;
         state.error = action.payload;
+        toast.error(`${state.error}`);
       })
       // sign in user
       .addCase(signInUser.pending, (state) => {
@@ -75,16 +79,21 @@ const userSlice = createSlice({
         state.isLoading = false;
         state.error = null;
         state.user = action.payload;
+        toast.success(
+          `Welcome back ${state.user.displayName}. You are in for a treat!`
+        );
       })
       .addCase(signInUser.rejected, (state, action) => {
         state.isLoading = false;
         state.error = action.payload;
+        toast.error(`${state.error}`);
       })
       // sign out user
       .addCase(signOutUser.fulfilled, (state) => {
         state.isLoading = false;
         state.error = null;
         state.user = null;
+        toast.success("You have successfully signed out.");
       });
   },
 });
