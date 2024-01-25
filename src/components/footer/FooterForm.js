@@ -12,7 +12,7 @@ const FooterForm = () => {
       return;
     }
 
-    toast.success("You've successfully subscribed.");
+    toast.success("You have just subscribed to our newsletter.");
     setEmail("");
   };
 
