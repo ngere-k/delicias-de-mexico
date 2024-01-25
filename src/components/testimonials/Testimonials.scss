@@ -1,4 +1,5 @@
 @import "../../sass/abstracts/variable";
+@import "../../sass/abstracts/mixins";
 
 .modal-testimonials {
   position: fixed;
@@ -17,11 +18,9 @@
 }
 
 .testimonials {
-  display: flex;
-  flex-direction: column;
-  gap: 2.4rem;
+  @include flex-column(2.4rem);
 
-  width: 57%;
+  width: 55%;
   height: 95vh;
   overflow-y: scroll;
   padding: 3.2rem 4.8rem;
