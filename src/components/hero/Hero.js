@@ -23,7 +23,7 @@ const Hero = () => {
           </p>
 
           <div className="hero__btn-container">
-            <Link to="/menu">
+            <Link to="/dishes">
               <button className="btn">Enjoy a hearty breakfast</button>
             </Link>
 
