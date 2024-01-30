@@ -23,6 +23,20 @@ export const registerUser = createAsyncThunk(
       await updateProfile(res.user, { displayName: username });
       return res.user;
     } catch (error) {
+      const errorCode = error.code;
+      // email already registered
+      if (errorCode === "auth/email-already-in-use") {
+        return rejectWithValue("This email has already been registered.");
+      }
+      // invalid email address
+      if (errorCode === "auth/invalid-email") {
+        return rejectWithValue("Please enter a valid email address.");
+      }
+      // password less than 6 characters
+      if (errorCode === "auth/weak-password") {
+        return rejectWithValue("Password should be at least 6 characters.");
+      }
+
       return rejectWithValue(error.message);
     }
   }
@@ -35,6 +49,11 @@ export const signInUser = createAsyncThunk(
       const res = await signInWithEmailAndPassword(auth, email, password);
       return res.user;
     } catch (error) {
+      const errorCode = error.code;
+      // invalid email or password
+      if (errorCode === "auth/invalid-credential") {
+        return rejectWithValue("Invalid email or password. Please try again.");
+      }
       return rejectWithValue(error.message);
     }
   }
@@ -99,4 +118,5 @@ const userSlice = createSlice({
 });
 
 const userReducer = userSlice.reducer;
+export const { userStateChanged } = userSlice.actions;
 export default userReducer;
