@@ -13,7 +13,7 @@
 
   &__paragraphs {
     font-size: 1.8rem;
-    line-height: 1.7;
+    line-height: $line-height-1;
 
     @include flex-column(1.6rem);
   }
@@ -24,6 +24,6 @@
   }
 
   &__img {
-    @include image-fit();
+    @include image-fit;
   }
 }
