@@ -12,6 +12,7 @@ const initialState = {
   user: null,
   error: null,
   isLoading: false,
+  isAuthReady: false,
 };
 
 // register user
@@ -71,6 +72,13 @@ export const signOutUser = createAsyncThunk("user/signOutUser", async () => {
 const userSlice = createSlice({
   name: "user",
   initialState,
+  reducers: {
+    userStateChanged: (state, action) => {
+      console.log(action.payload);
+      state.user = action.payload;
+      state.isAuthReady = true;
+    },
+  },
   extraReducers: (builder) => {
     builder
       // register user
