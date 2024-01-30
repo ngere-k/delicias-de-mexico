@@ -50,25 +50,29 @@ function App() {
   }, [dispatch]);
 
   return (
-    <BrowserRouter>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="about" element={<About />} />
-        <Route path="menu" element={<Menu />} />
-        <Route path="gallery" element={<Gallery />} />
-        <Route path="reservation" element={<Reservation />} />
-        <Route path="cart" element={<Cart />} />
-        <Route path="sign-in" element={<Signin />} />
-        <Route path="contact" element={<Contact />} />
-        <Route path="dishes" element={<Dishes />} />
-        <Route path="dishes/:id" element={<DishesInfo />} />
-        <Route path="*" element={<Error />} />
-      </Routes>
-      <Footer />
-      <Testimonials />
-      <ToastContainer position="top-center" className="toastStyle" />
-    </BrowserRouter>
+    <div>
+      {isAuthReady && (
+        <BrowserRouter>
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="about" element={<About />} />
+            <Route path="menu" element={<Menu />} />
+            <Route path="gallery" element={<Gallery />} />
+            <Route path="reservation" element={<Reservation />} />
+            <Route path="cart" element={<Cart />} />
+            <Route path="sign-in" element={<Signin />} />
+            <Route path="contact" element={<Contact />} />
+            <Route path="dishes" element={<Dishes />} />
+            <Route path="dishes/:id" element={<DishesInfo />} />
+            <Route path="*" element={<Error />} />
+          </Routes>
+          <Footer />
+          <Testimonials />
+          <ToastContainer position="top-center" className="toastStyle" />
+        </BrowserRouter>
+      )}
+    </div>
   );
 }
 
