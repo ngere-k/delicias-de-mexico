@@ -74,7 +74,6 @@ const userSlice = createSlice({
   initialState,
   reducers: {
     userStateChanged: (state, action) => {
-      console.log(action.payload);
       state.user = action.payload;
       state.isAuthReady = true;
     },
