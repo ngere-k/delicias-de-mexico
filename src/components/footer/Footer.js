@@ -1,8 +1,4 @@
-import {
-  RiFacebookFill,
-  RiTwitterXFill,
-  RiInstagramFill,
-} from "react-icons/ri";
+import { RiFacebookFill, RiTwitterXFill, RiLinkedinFill } from "react-icons/ri";
 import Logo from "../../components/logo/Logo";
 import FooterForm from "./FooterForm";
 import { Link } from "react-router-dom";
@@ -31,7 +27,7 @@ const Footer = () => {
               </li>
               <li>
                 <a href="" target="_blank" className="footer__link">
-                  <RiInstagramFill className="footer__icon" />
+                  <RiLinkedinFill className="footer__icon" />
                 </a>
               </li>
             </ul>
