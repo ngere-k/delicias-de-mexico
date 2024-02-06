@@ -3,6 +3,12 @@
 
 .dishes {
   background-color: $color-grey-light-1;
+  padding-bottom: 8rem;
+
+  &__hero {
+    margin-bottom: 8rem;
+    @include hero-background("../../assets/img/delivery.jpg");
+  }
 
   &__items {
     display: grid;
@@ -12,26 +18,32 @@
     background-color: $color-white;
     padding: 3.2rem;
     border-radius: 9px;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-      0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    box-shadow: $box-shadow-1;
   }
 
   &__list {
     padding: 9px;
-    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
-      rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    box-shadow: $box-shadow-2;
   }
 
   &__figure {
     height: 20rem;
     margin-bottom: 1.2rem;
+    overflow: hidden;
   }
 
   &__img {
     @include image-fit;
+    @include transition;
+  }
+
+  &__list:hover &__img {
+    transform: scale(1.05);
   }
 
   &__content {
+    color: $color-grey-dark-1;
+    font-weight: 400;
   }
 
   &__heading {
@@ -39,5 +51,10 @@
     font-weight: 600;
     color: $color-grey-dark-2;
     margin-bottom: 1.6rem;
+    @include transition;
+  }
+
+  &__list:hover &__heading {
+    text-decoration: underline;
   }
 }
