@@ -1,6 +1,7 @@
 import { useSelector } from "react-redux";
 import PageHero from "../../components/pageHero/PageHero";
 import { PiCurrencyNgn } from "react-icons/pi";
+import { Link } from "react-router-dom";
 
 // styles
 import "./Dishes.scss";
@@ -19,11 +20,20 @@ const Dishes = () => {
 
   return (
     <article className="dishes">
+      <PageHero
+        subheading="Food Delivery"
+        heading="Enjoy the flavors of Mexico at your doorstep"
+        heroClass="dishes__hero"
+      />
       <div className="container">
-        <ul className="dishes__items">
+        <div className="dishes__items">
           {foodsSlice.map((food) => {
             return (
-              <li key={food.id} className="dishes__list">
+              <Link
+                key={food.id}
+                to={`/dishes/${food.id}`}
+                className="dishes__list"
+              >
                 <figure className="dishes__figure">
                   <img
                     src={food.image}
@@ -42,10 +52,10 @@ const Dishes = () => {
                     <p className="price__amount">10,000.00</p>
                   </div>
                 </div>
-              </li>
+              </Link>
             );
           })}
-        </ul>
+        </div>
       </div>
     </article>
   );
