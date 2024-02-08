@@ -5,6 +5,9 @@ const initialState = {
   isLoading: false,
   error: null,
   foods: [],
+  singleFood: [],
+  isLoadingSingleFood: false,
+  errorInSingleFood: null,
 };
 
 export const fetchFoods = createAsyncThunk(
@@ -26,11 +29,34 @@ export const fetchFoods = createAsyncThunk(
   }
 );
 
+export const fetchSingleFood = createAsyncThunk(
+  "foods/fetchSingleFood",
+  async (id, { rejectWithValue }) => {
+    try {
+      const res = await axios(
+        `https://the-mexican-food-db.p.rapidapi.com/${id}`,
+        {
+          headers: {
+            "X-RapidAPI-Key": `${process.env.REACT_APP_FOOD_API_KEY}`,
+            "X-RapidAPI-Host": "the-mexican-food-db.p.rapidapi.com",
+          },
+        }
+      );
+      console.log(res.data);
+      return res.data;
+    } catch (error) {
+      console.log(error.response);
+      return rejectWithValue(error.response.data.message);
+    }
+  }
+);
+
 const foodsSlice = createSlice({
   name: "foods",
   initialState,
   extraReducers: (builder) => {
     builder
+      // fetch all foods
       .addCase(fetchFoods.pending, (state) => {
         state.isLoading = true;
       })
@@ -42,6 +68,19 @@ const foodsSlice = createSlice({
       .addCase(fetchFoods.rejected, (state, action) => {
         state.isLoading = false;
         state.error = action.payload;
+      })
+      // fetch single food
+      .addCase(fetchSingleFood.pending, (state) => {
+        state.isLoadingSingleFood = true;
+      })
+      .addCase(fetchSingleFood.fulfilled, (state, action) => {
+        state.isLoadingSingleFood = false;
+        state.errorInSingleFood = null;
+        state.singleFood = action.payload;
+      })
+      .addCase(fetchSingleFood.rejected, (state, action) => {
+        state.isLoadingSingleFood = false;
+        state.errorInSingleFood = action.payload;
       });
   },
 });
