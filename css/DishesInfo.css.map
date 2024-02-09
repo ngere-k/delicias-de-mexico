@@ -1,1 +1,1 @@
-{"version":3,"sources":[],"names":[],"mappings":"","file":"DishesInfo.css"}
+{"version":3,"sources":["../src/pages/dishesInfo/DishesInfo.scss","DishesInfo.css","../src/sass/abstracts/_mixins.scss"],"names":[],"mappings":"AAGE;EACE,aAAA;EACA,8BAAA;ACFJ;ADKE;EACE,aAAA;ACHJ;ADME;EEcA,cAAA;EACA,WAAA;EACA,YAAA;EACA,oBAAA;KAAA,iBAAA;ADjBF;ADOE;EACE,iBAAA;EACA,aAAA;ACLJ","file":"DishesInfo.css"}
