@@ -1,1 +1,18 @@
-/*# sourceMappingURL=DishesInfo.css.map */
+.food__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.food__figure {
+  height: 45rem;
+}
+.food__img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.food__more-info {
+  grid-column: 1/-1;
+  grid-row: 2/3;
+}/*# sourceMappingURL=DishesInfo.css.map */
