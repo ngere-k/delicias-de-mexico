@@ -8,7 +8,7 @@ import "./Dishes.scss";
 
 const Dishes = () => {
   const { foods, isLoading, error } = useSelector((store) => store.foods);
-  const foodsSlice = foods.slice(94, 109);
+  const foodsSlice = foods.slice(36, 54);
 
   if (isLoading) {
     return <h2>Loading...</h2>;
