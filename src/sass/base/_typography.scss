@@ -93,18 +93,3 @@ a {
     width: 100%;
   }
 }
-
-.price {
-  &__container {
-    @include flex-vertical-center(0.2rem);
-    font-weight: 500;
-  }
-
-  &__icon {
-    font-size: 1.8rem;
-  }
-
-  &__amount {
-    font-size: 1.6rem;
-  }
-}
