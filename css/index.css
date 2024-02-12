@@ -104,17 +104,4 @@ a {
 .btn--block {
   display: block;
   width: 100%;
-}
-
-.price__container {
-  display: flex;
-  align-items: center;
-  gap: 0.2rem;
-  font-weight: 500;
-}
-.price__icon {
-  font-size: 1.8rem;
-}
-.price__amount {
-  font-size: 1.6rem;
 }/*# sourceMappingURL=index.css.map */
