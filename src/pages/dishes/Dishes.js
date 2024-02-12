@@ -1,7 +1,8 @@
 import { useSelector } from "react-redux";
 import PageHero from "../../components/pageHero/PageHero";
-import { PiCurrencyNgn } from "react-icons/pi";
 import { Link } from "react-router-dom";
+import Price from "../../components/price/Price";
+import { normalPrice } from "../../utils/prices";
 
 // styles
 import "./Dishes.scss";
@@ -44,13 +45,7 @@ const Dishes = () => {
 
                 <div className="dishes__content">
                   <h4 className="dishes__heading">{food.title}</h4>
-
-                  <div className="price__container">
-                    <div>
-                      <PiCurrencyNgn className="price__icon" />
-                    </div>
-                    <p className="price__amount">10,000.00</p>
-                  </div>
+                  <Price amount={normalPrice} />
                 </div>
               </Link>
             );
