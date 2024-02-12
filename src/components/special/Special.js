@@ -1,5 +1,6 @@
 import { useSelector } from "react-redux";
-import { PiCurrencyNgn } from "react-icons/pi";
+import Price from "../price/Price";
+import { specialPrice } from "../../utils/prices";
 
 // styles
 import "./Special.scss";
@@ -41,11 +42,8 @@ const Special = () => {
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Voluptate incidunt mollitia inventore hic deleniti possimus.
                   </p>
-                  <div className="special__price price__container ">
-                    <div>
-                      <PiCurrencyNgn className="price__icon" />
-                    </div>
-                    <p className="price__amount">12,500.00</p>
+                  <div className="special__price">
+                    <Price amount={specialPrice} />
                   </div>
                 </div>
               </div>
