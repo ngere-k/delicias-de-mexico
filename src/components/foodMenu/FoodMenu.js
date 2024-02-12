@@ -1,4 +1,5 @@
-import { PiCurrencyNgn } from "react-icons/pi";
+import Price from "../price/Price";
+import { normalPrice } from "../../utils/prices";
 
 // styles
 import "./FoodMenu.scss";
@@ -15,12 +16,7 @@ const FoodMenu = ({ id, image, title }) => {
         <p className="menu__ingredients">eggs / beans / tortillas</p>
       </div>
 
-      <div className="price__container">
-        <div>
-          <PiCurrencyNgn className="price__icon" />
-        </div>
-        <p className="price__amount">10,000.00</p>
-      </div>
+      <Price amount={normalPrice} />
     </div>
   );
 };
