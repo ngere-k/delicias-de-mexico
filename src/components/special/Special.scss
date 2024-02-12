@@ -66,6 +66,7 @@
   }
 
   &__price {
+    @include flex-vertical-center(0.2rem);
     justify-content: center;
     color: $color-primary-dark-5;
 
