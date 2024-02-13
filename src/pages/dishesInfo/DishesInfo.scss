@@ -1,13 +1,19 @@
+@import "../../sass/abstracts/variable";
 @import "../../sass/abstracts/mixins";
 
 .food {
+  padding: 8rem 0;
+
   &__grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    align-items: center;
+    column-gap: 4.8rem;
+    row-gap: 6.4rem;
   }
 
   &__figure {
-    height: 45rem;
+    height: 40rem;
   }
 
   &__img {
@@ -15,10 +21,60 @@
   }
 
   &__content {
+    @include flex-column(2.4rem);
+  }
+
+  &__heading {
+    font-size: 3rem;
+    font-weight: 700;
+    color: $color-grey-dark-2;
+  }
+
+  &__description {
+    font-size: 1.8rem;
+    line-height: 1.5;
+  }
+
+  &__form {
+    @include flex-column(1.2rem);
   }
 
   &__more-info {
     grid-column: 1 / -1;
     grid-row: 2 / 3;
+
+    font-size: 1.8rem;
+    @include flex-column(2.4rem);
+  }
+}
+// method
+.method {
+  width: 60%;
+  &__item {
+    line-height: 1.5;
+    list-style: none;
+    @include flex-column(1.2rem);
+  }
+
+  &__list {
+    span {
+      font-weight: 500;
+    }
+  }
+}
+// ingredient
+.ingredient {
+  &__item {
+    list-style: none;
+    @include flex-column(0.8rem);
+  }
+
+  &__list {
+    @include flex-vertical-center(1.2rem);
+  }
+
+  &__icon {
+    font-size: 3rem;
+    color: $color-primary;
   }
 }
