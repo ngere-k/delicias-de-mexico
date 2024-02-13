@@ -1,7 +1,11 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchSingleFood } from "../../features/foods/foodsSlice";
+import Price from "../../components/price/Price";
+import { normalPrice } from "../../utils/prices";
+import InputRow from "../../components/inputRow/InputRow";
+import { IoCheckmark } from "react-icons/io5";
 
 // styles
 import "./DishesInfo.scss";
@@ -14,7 +18,11 @@ const DishesInfo = () => {
   } = useSelector((store) => store.foods);
   const { id } = useParams();
   const dispatch = useDispatch();
-  const { title, description, ingredients, image, method } = food;
+  const [quantity, setQuantity] = useState("1");
+
+  const handleChange = (e) => {
+    const value = e.target.value;
+  };
 
   useEffect(() => {
     dispatch(fetchSingleFood(id));
@@ -27,8 +35,8 @@ const DishesInfo = () => {
   if (error) {
     return <h2>{error}</h2>;
   }
-
-  console.log(food);
+  // destructuring here so when id change you get different item
+  const { title, description, ingredients, image, method } = food;
 
   return (
     <article className="food">
@@ -39,14 +47,56 @@ const DishesInfo = () => {
           </figure>
 
           <div className="food__content">
-            <h2>{title}</h2>
-            <p>N 10,000.00</p>
+            <h2 className="food__heading">{title}</h2>
+
+            <Price big amount={normalPrice} />
             <p className="food__description">{description}</p>
+
+            <form className="food__form">
+              <InputRow
+                type="number"
+                name="Quantity"
+                value={quantity}
+                handleChange={handleChange}
+              />
+              <div className="food__btn">
+                <button type="submit" className="btn btn--block">
+                  Add to cart
+                </button>
+              </div>
+            </form>
           </div>
 
           <div className="food__more-info">
-            <div className="food__method"></div>
-            <div className="food__ingredient"></div>
+            <div className="method">
+              <h3 className="heading-tertiary">Cooking method</h3>
+              <ul className="method__item">
+                {method?.map((item, index) => {
+                  return (
+                    <li key={index} className="method__list">
+                      <p className="method__paragraph">
+                        <span>{`Step ${index + 1}: `}</span>
+                        {item[`Step ${index + 1}`]}
+                      </p>
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
+
+            <div className="ingredient">
+              <h3 className="heading-tertiary">Ingredients</h3>
+              <ul className="ingredient__item">
+                {ingredients?.map((item, index) => {
+                  return (
+                    <li key={index} className="ingredient__list">
+                      <IoCheckmark className="ingredient__icon" />
+                      <p className="ingredient__paragraph">{item}</p>
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
           </div>
         </div>
       </div>
