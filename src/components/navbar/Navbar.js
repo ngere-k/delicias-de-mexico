@@ -80,7 +80,6 @@ const Navbar = () => {
           {user && (
             <li>
               <NavLink
-                to=""
                 className="main-nav__link"
                 onClick={() => dispatch(signOutUser())}
               >
