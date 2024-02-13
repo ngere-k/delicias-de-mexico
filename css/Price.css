@@ -9,4 +9,7 @@
 }
 .price__amount {
   font-size: 1.6rem;
+}
+.price__amount--big {
+  font-size: 1.8rem;
 }/*# sourceMappingURL=Price.css.map */
