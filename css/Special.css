@@ -89,6 +89,16 @@ a {
   width: 100%;
 }
 
+.section {
+  padding: 5rem 0;
+}
+
+.section-center {
+  width: 90vw;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
 .section-special {
   padding: 9.6rem 0;
   background-color: #faf9f9;

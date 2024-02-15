@@ -104,4 +104,14 @@ a {
 .btn--block {
   display: block;
   width: 100%;
+}
+
+.section {
+  padding: 5rem 0;
+}
+
+.section-center {
+  width: 90vw;
+  margin: 0 auto;
+  max-width: 1200px;
 }/*# sourceMappingURL=index.css.map */
