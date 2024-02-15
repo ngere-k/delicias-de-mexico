@@ -1,6 +1,8 @@
 import { useSelector } from "react-redux";
 import Price from "../price/Price";
 import { specialPrice } from "../../utils/prices";
+import Loading from "../loading/Loading";
+import SectionError from "../sectionError/SectionError";
 
 // styles
 import "./Special.scss";
@@ -9,11 +11,11 @@ const Special = () => {
   const { foods, isLoading, error } = useSelector((store) => store.foods);
 
   if (isLoading) {
-    return <h2>Loading...</h2>;
+    return <Loading />;
   }
 
   if (error) {
-    return <h2>{error}</h2>;
+    return <SectionError error={error} />;
   }
 
   return (
