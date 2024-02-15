@@ -1,6 +1,8 @@
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import FoodMenu from "../foodMenu/FoodMenu";
+import Loading from "../loading/Loading";
+import SectionError from "../sectionError/SectionError";
 
 // styles
 import "./HomeMenu.scss";
@@ -10,11 +12,11 @@ const HomeMenu = () => {
   const foodsSlice = foods.slice(23, 29);
 
   if (isLoading) {
-    return <h2>Loading...</h2>;
+    return <Loading />;
   }
 
   if (error) {
-    return <h2>{error}</h2>;
+    return <SectionError error={error} />;
   }
 
   return (
