@@ -1,6 +1,8 @@
 import { useSelector } from "react-redux";
 import FoodMenu from "../../components/foodMenu/FoodMenu";
 import PageHero from "../../components/pageHero/PageHero";
+import Loading from "../../components/loading/Loading";
+import SectionError from "../../components/sectionError/SectionError";
 
 // styles
 import "./Menu.scss";
@@ -10,11 +12,11 @@ const Menu = () => {
   const foodsSlice = foods.slice(8, 22);
 
   if (isLoading) {
-    return <h2>Loading...</h2>;
+    return <Loading />;
   }
 
   if (error) {
-    return <h2>{error}</h2>;
+    return <SectionError error={error} />;
   }
 
   return (
