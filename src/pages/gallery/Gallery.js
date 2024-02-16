@@ -1,4 +1,6 @@
 import { useSelector } from "react-redux";
+import Loading from "../../components/loading/Loading";
+import SectionError from "../../components/sectionError/SectionError";
 
 // styles
 import "./Gallery.scss";
@@ -8,11 +10,11 @@ const Gallery = () => {
   const foodsSlice = foods.slice(15, 28);
 
   if (isLoading) {
-    return <h2>Loading...</h2>;
+    return <Loading />;
   }
 
   if (error) {
-    return <h2>{error}</h2>;
+    return <SectionError error={error} />;
   }
 
   return (
