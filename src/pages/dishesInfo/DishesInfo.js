@@ -6,6 +6,8 @@ import Price from "../../components/price/Price";
 import { normalPrice } from "../../utils/prices";
 import InputRow from "../../components/inputRow/InputRow";
 import { IoCheckmark } from "react-icons/io5";
+import Loading from "../../components/loading/Loading";
+import SectionError from "../../components/sectionError/SectionError";
 
 // styles
 import "./DishesInfo.scss";
@@ -29,11 +31,11 @@ const DishesInfo = () => {
   }, [dispatch, id]);
 
   if (isLoading) {
-    return <h2>Loading...</h2>;
+    return <Loading />;
   }
 
   if (error) {
-    return <h2>{error}</h2>;
+    return <SectionError error={error} />;
   }
   // destructuring here so when id change you get different item
   const { title, description, ingredients, image, method } = food;
