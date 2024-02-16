@@ -3,6 +3,8 @@ import PageHero from "../../components/pageHero/PageHero";
 import { Link } from "react-router-dom";
 import Price from "../../components/price/Price";
 import { normalPrice } from "../../utils/prices";
+import Loading from "../../components/loading/Loading";
+import SectionError from "../../components/sectionError/SectionError";
 
 // styles
 import "./Dishes.scss";
@@ -12,11 +14,11 @@ const Dishes = () => {
   const foodsSlice = foods.slice(36, 54);
 
   if (isLoading) {
-    return <h2>Loading...</h2>;
+    return <Loading />;
   }
 
   if (error) {
-    return <h2>{error}</h2>;
+    return <SectionError error={error} />;
   }
 
   return (
