@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import { PiArrowRight } from "react-icons/pi";
 import CustomerReview from "../customerReview/CustomerReview";
 import { openReview } from "../../features/modal/modalSlice";
+import Loading from "../loading/Loading";
+import SectionError from "../sectionError/SectionError";
 
 // styles
 import "./HomeTestimonials.scss";
@@ -13,11 +15,11 @@ const HomeTestimonials = () => {
   const dispatch = useDispatch();
 
   if (isLoading) {
-    return <div>Loading..</div>;
+    return <Loading />;
   }
 
   if (error) {
-    return <div>{error}</div>;
+    return <SectionError error={error} />;
   }
 
   return (
