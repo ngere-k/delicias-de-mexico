@@ -8,6 +8,7 @@ import InputRow from "../../components/inputRow/InputRow";
 import { IoCheckmark } from "react-icons/io5";
 import Loading from "../../components/loading/Loading";
 import SectionError from "../../components/sectionError/SectionError";
+import { Link } from "react-router-dom";
 
 // styles
 import "./DishesInfo.scss";
@@ -62,9 +63,9 @@ const DishesInfo = () => {
                 handleChange={handleChange}
               />
               <div className="food__btn">
-                <button type="submit" className="btn btn--block">
+                <Link to="/cart" type="submit" className="btn btn--block">
                   Add to cart
-                </button>
+                </Link>
               </div>
             </form>
           </div>
