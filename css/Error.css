@@ -19,15 +19,4 @@
 }
 .error__text:not(:last-child) {
   line-height: 1.7;
-}
-.error__btn {
-  border: none;
-  background-color: transparent;
-  font-family: inherit;
-  font-weight: inherit;
-  font-size: 1.6rem;
-  text-decoration: underline;
-  color: #e67e22;
-  margin-top: 3.2rem;
-  cursor: pointer;
 }/*# sourceMappingURL=Error.css.map */
