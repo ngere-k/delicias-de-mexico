@@ -27,7 +27,7 @@ const Error = () => {
           </p>
 
           <Link to="/">
-            <button className="error__btn">Back to home</button>
+            <button className="btn-underline">Back to home</button>
           </Link>
         </div>
       </div>
