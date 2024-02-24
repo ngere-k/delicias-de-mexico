@@ -25,16 +25,4 @@
   &__text:not(:last-child) {
     line-height: 1.7;
   }
-
-  &__btn {
-    border: none;
-    background-color: transparent;
-    font-family: inherit;
-    font-weight: inherit;
-    font-size: 1.6rem;
-    text-decoration: underline;
-    color: $color-primary;
-    margin-top: 3.2rem;
-    cursor: pointer;
-  }
 }
