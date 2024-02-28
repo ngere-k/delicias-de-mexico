@@ -35,7 +35,9 @@
     line-height: 1.5;
   }
 
-  &__form {
+  &__amount-box {
+    width: 31%;
+    align-items: center;
     @include flex-column(1.2rem);
   }
 
