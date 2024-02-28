@@ -1,0 +1,25 @@
+.amount {
+  display: flex;
+  align-items: center;
+  gap: 2.4rem;
+}
+.amount__btn {
+  font-size: 1.2rem;
+  padding: 0.8rem;
+  cursor: pointer;
+  background-color: transparent;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.amount__icon {
+  font-size: 1.6rem;
+}
+.amount__number {
+  font-size: 2.4rem;
+  font-weight: 500;
+  color: #333;
+}/*# sourceMappingURL=AmountButtons.css.map */
