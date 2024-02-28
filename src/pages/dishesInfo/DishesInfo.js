@@ -4,11 +4,11 @@ import { useDispatch, useSelector } from "react-redux";
 import { fetchSingleFood } from "../../features/foods/foodsSlice";
 import Price from "../../components/price/Price";
 import { normalPrice } from "../../utils/prices";
-import InputRow from "../../components/inputRow/InputRow";
 import { IoCheckmark } from "react-icons/io5";
 import Loading from "../../components/loading/Loading";
 import SectionError from "../../components/sectionError/SectionError";
 import { Link } from "react-router-dom";
+import AmountButtons from "../../components/amountButtons/AmountButtons";
 
 // styles
 import "./DishesInfo.scss";
@@ -21,10 +21,14 @@ const DishesInfo = () => {
   } = useSelector((store) => store.foods);
   const { id } = useParams();
   const dispatch = useDispatch();
-  const [quantity, setQuantity] = useState("1");
+  const [amount, setAmount] = useState(1);
 
-  const handleChange = (e) => {
-    const value = e.target.value;
+  const increase = () => {
+    console.log("increase");
+  };
+
+  const decrease = () => {
+    console.log("decrease");
   };
 
   useEffect(() => {
@@ -55,21 +59,20 @@ const DishesInfo = () => {
             <Price big amount={normalPrice} />
             <p className="food__description">{description}</p>
 
-            <form className="food__form">
-              <InputRow
-                type="number"
-                name="Quantity"
-                value={quantity}
-                handleChange={handleChange}
+            <div className="food__amount-box">
+              <AmountButtons
+                amount={amount}
+                increase={increase}
+                decrease={decrease}
               />
               <div className="food__btn">
-                <Link to="/cart" type="submit" className="btn btn--block">
+                <Link to="/cart" type="button" className="btn btn--block">
                   Add to cart
                 </Link>
               </div>
-            </form>
+            </div>
           </div>
-
+          {/* cooking method */}
           <div className="food__more-info">
             <div className="method">
               <h3 className="heading-tertiary">Cooking method</h3>
@@ -86,7 +89,7 @@ const DishesInfo = () => {
                 })}
               </ul>
             </div>
-
+            {/* ingredients */}
             <div className="ingredient">
               <h3 className="heading-tertiary">Ingredients</h3>
               <ul className="ingredient__item">
