@@ -33,7 +33,9 @@
   font-size: 1.8rem;
   line-height: 1.5;
 }
-.food__form {
+.food__amount-box {
+  width: 31%;
+  align-items: center;
   display: flex;
   flex-direction: column;
   gap: 1.2rem;
