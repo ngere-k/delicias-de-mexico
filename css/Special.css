@@ -88,6 +88,9 @@ a {
   display: block;
   width: 100%;
 }
+.btn--padding-left-right-sm {
+  padding: 0.8rem 1.6rem;
+}
 
 .btn-underline {
   border: none;
