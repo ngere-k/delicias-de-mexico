@@ -6,13 +6,13 @@
 .events {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 2.4rem;
+  gap: 3.2rem;
 }
 .events__event {
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 .events__figure {
-  height: 30rem;
+  height: 27rem;
 }
 .events__img {
   display: block;
