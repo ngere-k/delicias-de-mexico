@@ -36,9 +36,10 @@
   }
 
   &__amount-box {
-    width: 31%;
+    width: 25%;
     align-items: center;
-    @include flex-column(1.2rem);
+    margin-top: 1.6rem;
+    @include flex-column(1.6rem);
   }
 
   &__more-info {
