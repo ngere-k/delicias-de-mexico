@@ -66,7 +66,11 @@ const DishesInfo = () => {
                 decrease={decrease}
               />
               <div className="food__btn">
-                <Link to="/cart" type="button" className="btn btn--block">
+                <Link
+                  to="/cart"
+                  type="button"
+                  className="btn btn--padding-left-right-sm"
+                >
                   Add to cart
                 </Link>
               </div>
