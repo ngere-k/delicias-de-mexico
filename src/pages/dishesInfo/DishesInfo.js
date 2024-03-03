@@ -22,13 +22,26 @@ const DishesInfo = () => {
   const { id } = useParams();
   const dispatch = useDispatch();
   const [amount, setAmount] = useState(1);
+  const stock = 50;
 
   const increase = () => {
-    console.log("increase");
+    setAmount((prevAmount) => {
+      let tempAmount = prevAmount + 1;
+      if (tempAmount > stock) {
+        tempAmount = stock;
+      }
+      return tempAmount;
+    });
   };
 
   const decrease = () => {
-    console.log("decrease");
+    setAmount((prevAmount) => {
+      let tempAmount = prevAmount - 1;
+      if (tempAmount < 1) {
+        tempAmount = 1;
+      }
+      return tempAmount;
+    });
   };
 
   useEffect(() => {
@@ -66,11 +79,7 @@ const DishesInfo = () => {
                 decrease={decrease}
               />
               <div className="food__btn">
-                <Link
-                  to="/cart"
-                  type="button"
-                  className="btn btn--padding-left-right-sm"
-                >
+                <Link to="/cart" className="btn btn--padding-left-right-sm">
                   Add to cart
                 </Link>
               </div>
