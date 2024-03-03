@@ -2,15 +2,19 @@
 @import "../../sass/abstracts/variable";
 
 .amount {
-  @include flex-vertical-center(2.4rem);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  justify-items: center;
+  gap: 2.4rem;
 
   &__btn {
+    border: none;
     font-size: 1.2rem;
     padding: 0.8rem;
     cursor: pointer;
     background-color: transparent;
     border-radius: 50%;
-    border: 2px solid #ccc;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 
     display: flex;
