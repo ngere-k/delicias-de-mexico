@@ -9,6 +9,7 @@ import Loading from "../../components/loading/Loading";
 import SectionError from "../../components/sectionError/SectionError";
 import { Link } from "react-router-dom";
 import AmountButtons from "../../components/amountButtons/AmountButtons";
+import { addToCart } from "../../features/cart/cartSlice";
 
 // styles
 import "./DishesInfo.scss";
@@ -79,7 +80,15 @@ const DishesInfo = () => {
                 decrease={decrease}
               />
               <div className="food__btn">
-                <Link to="/cart" className="btn btn--padding-left-right-sm">
+                <Link
+                  to="/cart"
+                  onClick={() =>
+                    dispatch(
+                      addToCart({ food, stock, price: normalPrice, amount })
+                    )
+                  }
+                  className="btn btn--padding-left-right-sm"
+                >
                   Add to cart
                 </Link>
               </div>
