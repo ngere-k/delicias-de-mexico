@@ -23,10 +23,9 @@ export const fetchFoods = createAsyncThunk(
 
       return res.data;
     } catch (error) {
-      console.log(error.response);
       if (error.response.status === 429) {
         return rejectWithValue(
-          "You have exceeded the MONTHLY quota for Requests on your current plan, BASIC. Please check back on 20th."
+          "You have exceeded the MONTHLY Requests on your current plan, BASIC. You can start using on/after 20th."
         );
       }
       return rejectWithValue(error.response.data.message);
@@ -47,13 +46,12 @@ export const fetchSingleFood = createAsyncThunk(
           },
         }
       );
-      console.log(res.data);
+
       return res.data;
     } catch (error) {
-      console.log(error.response);
       if (error.response.status === 429) {
         return rejectWithValue(
-          "You have exceeded the MONTHLY quota for Requests on your current plan, BASIC. Please check back on 20th."
+          "You have exceeded the MONTHLY Requests on your current plan, BASIC. You can start using on/after 20th."
         );
       }
       return rejectWithValue(error.response.data.message);
