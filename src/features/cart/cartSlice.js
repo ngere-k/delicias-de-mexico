@@ -20,15 +20,17 @@ const cartSlice = createSlice({
       } = payload;
 
       const findCartItem = state.cart.find((item) => item.id === id);
-
       if (findCartItem) {
         state.cart = state.cart.map((cartItem) => {
           if (cartItem.id === id) {
-            let newCartAmount = cartItem.amount + 1;
+            let newCartAmount = cartItem.amount + amount;
             if (newCartAmount > stock) {
               newCartAmount = stock;
             }
-            return newCartAmount;
+            return {
+              ...cartItem,
+              amount: newCartAmount,
+            };
           } else {
             return cartItem;
           }
