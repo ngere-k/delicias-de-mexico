@@ -17,7 +17,7 @@ const CartHeader = () => {
       <div className="cart__rule" />
       <div className="cart__name">
         <h2 className="cart__heading">
-          Cart <span className="cart__item">( 3 items in your cart)</span>
+          Cart <span className="cart__item">(3 items in your cart)</span>
         </h2>
 
         <button className="cart__delete">
