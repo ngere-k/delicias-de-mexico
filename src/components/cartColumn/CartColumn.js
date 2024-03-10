@@ -1,10 +1,19 @@
-import React from "react";
+import { MdDelete } from "react-icons/md";
 
 // styles
 import "./CartColumn.scss";
 
 const CartColumn = () => {
-  return <div>CartColumn</div>;
+  return (
+    <div className="cart__column">
+      <h5>Product</h5>
+      <h5>Quantity</h5>
+      <h5>Price</h5>
+      <span>
+        <MdDelete className="cart__delete-icon cart__icon-hidden" />
+      </span>
+    </div>
+  );
 };
 
 export default CartColumn;
