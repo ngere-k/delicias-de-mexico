@@ -1,0 +1,60 @@
+@import "../../sass/abstracts/variable";
+@import "../../sass/abstracts/mixins";
+
+.cart {
+  &__content {
+    @include flex-column(2.4rem);
+  }
+
+  &__product {
+    display: grid;
+    grid-template-columns: 2fr repeat(2, 1fr) auto;
+    justify-items: center;
+    align-items: center;
+    padding: 1.2rem;
+    border-radius: 9px;
+    box-shadow: $box-shadow-2;
+  }
+
+  &__figure-container {
+    justify-self: start;
+
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 1.8rem;
+  }
+
+  &__figure {
+    width: 9rem;
+    height: 9rem;
+    border-radius: 9px;
+    overflow: hidden;
+  }
+
+  &__img {
+    @include image-fit;
+  }
+
+  &__figcaption {
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: $color-grey-dark-2;
+  }
+
+  &__btn {
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+  }
+
+  &__delete-icon {
+    font-size: 2.4rem;
+    @include transition;
+    color: $color-grey-dark-3;
+  }
+
+  &__btn:hover &__delete-icon {
+    color: #ff4848;
+  }
+}
