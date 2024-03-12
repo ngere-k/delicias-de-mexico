@@ -9,7 +9,7 @@ const CartColumn = () => {
       <h5>Product</h5>
       <h5>Quantity</h5>
       <h5>Price</h5>
-      <span>
+      <span className="cart__btn">
         <MdDelete className="cart__delete-icon cart__icon-hidden" />
       </span>
     </div>
