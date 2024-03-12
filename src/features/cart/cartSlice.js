@@ -46,13 +46,47 @@ const cartSlice = createSlice({
         };
         state.cart.push(newCartItem);
       }
-
-      localStorage.setItem("foodCart", JSON.stringify(state.cart));
+    },
+    removeCartItem: (state, { payload: id }) => {
+      state.cart = state.cart.filter((item) => item.id !== id);
+    },
+    toggleCartAmount: (state, { payload }) => {
+      const { id, name } = payload;
+      state.cart = state.cart.map((item) => {
+        if (item.id === id) {
+          if (name === "increase") {
+            let newCartAmount = item.amount + 1;
+            if (newCartAmount > item.stock) {
+              newCartAmount = item.stock;
+            }
+            return {
+              ...item,
+              amount: newCartAmount,
+            };
+          }
+          if (name === "decrease") {
+            let newCartAmount = item.amount - 1;
+            if (newCartAmount < 1) {
+              newCartAmount = 1;
+            }
+            return {
+              ...item,
+              amount: newCartAmount,
+            };
+          }
+        } else {
+          return item;
+        }
+      });
+    },
+    clearCart: (state) => {
+      state.cart = [];
     },
   },
 });
 
-export const { addToCart } = cartSlice.actions;
+export const { addToCart, removeCartItem, toggleCartAmount, clearCart } =
+  cartSlice.actions;
 
 const cartReducer = cartSlice.reducer;
 export default cartReducer;
