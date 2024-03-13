@@ -120,3 +120,13 @@ a {
   margin: 0 auto;
   max-width: 120rem;
 }
+
+.price {
+  &--sm {
+    font-size: 1.6rem;
+  }
+
+  &--md {
+    font-size: 1.8rem;
+  }
+}
