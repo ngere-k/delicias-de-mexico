@@ -2,17 +2,13 @@
 @import "../../sass/abstracts/mixins";
 
 .cart {
-  &__content {
-    @include flex-column(2.4rem);
-  }
-
   &__product {
     display: grid;
     grid-template-columns: 2fr repeat(2, 1fr) auto;
     justify-items: center;
     align-items: center;
     padding: 1.2rem;
-    border-radius: 9px;
+    border-radius: 0.9rem;
     box-shadow: $box-shadow-2;
   }
 
@@ -28,7 +24,7 @@
   &__figure {
     width: 9rem;
     height: 9rem;
-    border-radius: 9px;
+    border-radius: 0.9rem;
     overflow: hidden;
   }
 
@@ -45,6 +41,10 @@
   &__btn {
     border: none;
     cursor: pointer;
+    padding: 6px;
+    border-radius: 50%;
+    @include transition;
+    @include center-object-1;
     background-color: transparent;
   }
 
@@ -56,5 +56,8 @@
 
   &__btn:hover &__delete-icon {
     color: #ff4848;
+  }
+  &__btn:hover {
+    background-color: $color-error-secondary;
   }
 }
