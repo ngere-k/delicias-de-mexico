@@ -1,8 +1,8 @@
 import { useSelector } from "react-redux";
-import Price from "../price/Price";
 import { specialPrice } from "../../utils/prices";
 import Loading from "../loading/Loading";
 import SectionError from "../sectionError/SectionError";
+import { formatPrice } from "../../utils/formatPrice";
 
 // styles
 import "./Special.scss";
@@ -44,9 +44,7 @@ const Special = () => {
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Voluptate incidunt mollitia inventore hic deleniti possimus.
                   </p>
-                  <div className="special__price">
-                    <Price amount={specialPrice} />
-                  </div>
+                  <p className="special__price">{formatPrice(specialPrice)}</p>
                 </div>
               </div>
             );
