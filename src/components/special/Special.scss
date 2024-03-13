@@ -66,10 +66,8 @@
   }
 
   &__price {
-    @include flex-vertical-center(0.2rem);
-    justify-content: center;
     color: $color-primary-dark-5;
-
+    font-size: 1.6rem;
     @include transition;
   }
 
