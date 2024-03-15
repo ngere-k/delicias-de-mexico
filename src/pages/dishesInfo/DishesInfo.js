@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchSingleFood } from "../../features/foods/foodsSlice";
-import Price from "../../components/price/Price";
 import { normalPrice } from "../../utils/prices";
 import { IoCheckmark } from "react-icons/io5";
 import Loading from "../../components/loading/Loading";
@@ -10,6 +9,7 @@ import SectionError from "../../components/sectionError/SectionError";
 import { Link } from "react-router-dom";
 import AmountButtons from "../../components/amountButtons/AmountButtons";
 import { addToCart } from "../../features/cart/cartSlice";
+import { formatPrice } from "../../utils/formatPrice";
 
 // styles
 import "./DishesInfo.scss";
@@ -70,7 +70,9 @@ const DishesInfo = () => {
           <div className="food__content">
             <h2 className="food__heading">{title}</h2>
 
-            <Price big amount={normalPrice} />
+            <p className="price--md text-bold-500">
+              {formatPrice(normalPrice)}
+            </p>
             <p className="food__description">{description}</p>
 
             <div className="food__amount-box">
