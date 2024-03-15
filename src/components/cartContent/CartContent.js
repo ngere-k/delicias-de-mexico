@@ -30,7 +30,7 @@ const CartContent = ({ id, image, title, amount, price }) => {
         <figcaption className="cart__figcaption">{title}</figcaption>
       </div>
       <AmountButtons amount={amount} increase={increase} decrease={decrease} />
-      <p className="price--sm text-bold-500">{formatPrice(price * amount)}</p>
+      <p className="price--sm cart__price">{formatPrice(price * amount)}</p>
 
       <button
         className="cart__btn"
