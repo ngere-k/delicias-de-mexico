@@ -38,6 +38,11 @@
     color: $color-grey-dark-2;
   }
 
+  &__price {
+    color: $color-grey-dark-2;
+    font-weight: 500;
+  }
+
   &__btn {
     border: none;
     cursor: pointer;
