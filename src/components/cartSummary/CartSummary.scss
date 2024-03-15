@@ -1,0 +1,35 @@
+@import "../../sass/abstracts/variable";
+@import "../../sass/abstracts/mixins";
+
+.summary {
+  padding: 1.6rem;
+  border-radius: 0.9rem;
+  box-shadow: $box-shadow-2;
+  background-color: $color-white;
+
+  &__content {
+    @include flex-column(1.2rem);
+    margin-bottom: 3.2rem;
+  }
+
+  &__rule {
+    border-bottom: 1px solid #ddd;
+  }
+
+  &__subtotal,
+  &__delivery,
+  &__total {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: $color-grey-dark-2;
+
+    span {
+      color: $color-grey-dark-2;
+      font-weight: 400;
+    }
+  }
+}
