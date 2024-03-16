@@ -25,6 +25,7 @@ import DishesInfo from "./pages/dishesInfo/DishesInfo";
 import Navbar from "./components/navbar/Navbar";
 import Error from "./pages/error/Error";
 import Contact from "./pages/contact/Contact";
+import Checkout from "./pages/checkout/Checkout";
 
 // styles
 import "./App.scss";
@@ -63,6 +64,7 @@ function App() {
             <Route path="cart" element={<Cart />} />
             <Route path="sign-in" element={<Signin />} />
             <Route path="contact" element={<Contact />} />
+            <Route path="checkout" element={<Checkout />} />
             <Route path="dishes" element={<Dishes />} />
             <Route path="dishes/:id" element={<DishesInfo />} />
             <Route path="*" element={<Error />} />
