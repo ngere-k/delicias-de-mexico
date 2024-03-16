@@ -1,1 +1,1 @@
-{"version":3,"sources":["../src/components/sectionError/SectionError.scss","SectionError.css"],"names":[],"mappings":"AAEA;EACE,iBAAA;EACA,gBAAA;EACA,eAAA;EACA,cAAA;EACA,yBAAA;ACDF","file":"SectionError.css"}
+{"version":3,"sources":["../src/components/sectionError/SectionError.scss","../src/sass/abstracts/_variable.scss","SectionError.css"],"names":[],"mappings":"AAEA;EACE,iBAAA;EACA,gBAAA;EACA,eAAA;EACA,cCcoB;EDbpB,yBCcsB;ACfxB","file":"SectionError.css"}

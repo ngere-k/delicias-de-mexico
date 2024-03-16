@@ -115,6 +115,13 @@ a {
   max-width: 120rem;
 }
 
+.price--sm {
+  font-size: 1.6rem;
+}
+.price--md {
+  font-size: 1.8rem;
+}
+
 .section-home-menu {
   padding: 9.6rem 0;
   background-image: linear-gradient(to bottom right, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url(../../assets/img/homeMenu.jpg);

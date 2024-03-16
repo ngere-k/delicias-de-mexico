@@ -115,6 +115,13 @@ a {
   max-width: 120rem;
 }
 
+.price--sm {
+  font-size: 1.6rem;
+}
+.price--md {
+  font-size: 1.8rem;
+}
+
 .section-special {
   padding: 9.6rem 0;
   background-color: #faf9f9;
@@ -172,11 +179,8 @@ a {
   color: #733f11;
 }
 .special__price {
-  display: flex;
-  align-items: center;
-  gap: 0.2rem;
-  justify-content: center;
   color: #45260a;
+  font-size: 1.6rem;
   transition: all 0.3s;
 }
 .special__box:hover .special__price {

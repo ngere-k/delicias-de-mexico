@@ -1,1 +1,36 @@
-/*# sourceMappingURL=Cart.css.map */
+.empty {
+  font-size: 2rem;
+  text-align: center;
+  font-weight: 600;
+  height: 60vh;
+  padding: 4.8rem 0;
+  letter-spacing: 1.2px;
+  color: #333;
+  background-color: #faf9f9;
+}
+.empty__heading {
+  margin-bottom: 1.2rem;
+}
+
+.article-cart {
+  padding: 8rem 0;
+  background-color: #f7f7f7;
+}
+
+.cart {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  align-items: start;
+  gap: 3.2rem;
+}
+.cart__container {
+  padding: 3.2rem;
+  border-radius: 0.9rem;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+.cart__content {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}/*# sourceMappingURL=Cart.css.map */

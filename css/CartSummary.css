@@ -1,0 +1,27 @@
+.summary {
+  padding: 1.6rem;
+  border-radius: 0.9rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  background-color: #fff;
+}
+.summary__content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin-bottom: 3.2rem;
+}
+.summary__rule {
+  border-bottom: 1px solid #ddd;
+}
+.summary__subtotal, .summary__delivery, .summary__total {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #333;
+}
+.summary__subtotal span, .summary__delivery span, .summary__total span {
+  color: #333;
+  font-weight: 400;
+}/*# sourceMappingURL=CartSummary.css.map */

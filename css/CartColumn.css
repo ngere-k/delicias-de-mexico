@@ -1,0 +1,15 @@
+.cart__column {
+  display: grid;
+  grid-template-columns: 2fr repeat(2, 1fr) auto;
+  align-items: center;
+  justify-items: center;
+  margin-bottom: 1.2rem;
+  padding: 0 1.2rem;
+}
+.cart__column h5 {
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+.cart__icon-hidden {
+  visibility: hidden;
+}/*# sourceMappingURL=CartColumn.css.map */

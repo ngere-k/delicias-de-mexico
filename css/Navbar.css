@@ -132,6 +132,13 @@ a {
   max-width: 120rem;
 }
 
+.price--sm {
+  font-size: 1.6rem;
+}
+.price--md {
+  font-size: 1.8rem;
+}
+
 .header {
   display: grid;
   grid-template-columns: auto 1fr;
