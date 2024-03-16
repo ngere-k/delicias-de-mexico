@@ -22,9 +22,7 @@ const Cart = () => {
   if (cart.length < 1) {
     return (
       <article className="empty">
-        <h2 className="empty__heading">
-          Empty cart? Let’s change that with flavor!
-        </h2>
+        <h2 className="empty__heading">Ready to fill your cart with flavor?</h2>
         <Link to="/dishes" className="btn">
           Start shopping
         </Link>
