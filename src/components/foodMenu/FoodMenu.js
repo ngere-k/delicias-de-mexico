@@ -1,5 +1,5 @@
-import Price from "../price/Price";
 import { normalPrice } from "../../utils/prices";
+import { formatPrice } from "../../utils/formatPrice";
 
 // styles
 import "./FoodMenu.scss";
@@ -16,7 +16,7 @@ const FoodMenu = ({ id, image, title }) => {
         <p className="menu__ingredients">eggs / beans / tortillas</p>
       </div>
 
-      <Price amount={normalPrice} />
+      <p className="price--sm">{formatPrice(normalPrice)}</p>
     </div>
   );
 };
