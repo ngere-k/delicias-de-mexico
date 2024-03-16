@@ -1,10 +1,10 @@
 import { useSelector } from "react-redux";
 import PageHero from "../../components/pageHero/PageHero";
 import { Link } from "react-router-dom";
-import Price from "../../components/price/Price";
 import { normalPrice } from "../../utils/prices";
 import Loading from "../../components/loading/Loading";
 import SectionError from "../../components/sectionError/SectionError";
+import { formatPrice } from "../../utils/formatPrice";
 
 // styles
 import "./Dishes.scss";
@@ -47,7 +47,7 @@ const Dishes = () => {
 
                 <div className="dishes__content">
                   <h4 className="dishes__heading">{food.title}</h4>
-                  <Price amount={normalPrice} />
+                  <p className="price--sm">{formatPrice(normalPrice)}</p>
                 </div>
               </Link>
             );
