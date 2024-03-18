@@ -3,14 +3,13 @@
 
 .menu {
   display: grid;
-  grid-template-columns: auto 1fr auto;
+  grid-template-columns: auto 1fr;
+  align-items: center;
   column-gap: 2.4rem;
-  align-items: start;
 
   &__img-box {
     width: 10rem;
     height: 10rem;
-    transform: translateY(-1.5rem);
   }
 
   &__img {
@@ -18,9 +17,27 @@
     border-radius: 50%;
   }
 
+  &__heading {
+    line-height: 1.1;
+    margin: 0 !important;
+  }
+
+  &__detail {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: start;
+    column-gap: 2.4rem;
+    row-gap: 0.4rem;
+  }
+
   &__ingredients {
     font-size: 1.6rem;
-    margin-top: -0.8rem;
     color: $color-grey-dark-3;
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  }
+
+  &__price {
+    color: $color-grey-dark-2;
   }
 }
