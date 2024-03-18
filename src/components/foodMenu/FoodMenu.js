@@ -11,12 +11,11 @@ const FoodMenu = ({ id, image, title }) => {
         <img src={image} alt={title} className="menu__img" />
       </div>
 
-      <div className="menu__details">
-        <p className="heading-tertiary">{title}</p>
+      <div className="menu__detail">
+        <h4 className="heading-tertiary menu__heading">{title}</h4>
         <p className="menu__ingredients">eggs / beans / tortillas</p>
+        <p className="price--sm menu__price">{formatPrice(normalPrice)}</p>
       </div>
-
-      <p className="price--sm">{formatPrice(normalPrice)}</p>
     </div>
   );
 };
