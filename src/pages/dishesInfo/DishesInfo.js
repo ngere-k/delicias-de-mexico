@@ -70,9 +70,7 @@ const DishesInfo = () => {
           <div className="food__content">
             <h2 className="food__heading">{title}</h2>
 
-            <p className="price--md text-bold-500">
-              {formatPrice(normalPrice)}
-            </p>
+            <p className="food__price">{formatPrice(normalPrice)}</p>
             <p className="food__description">{description}</p>
 
             <div className="food__amount-box">
