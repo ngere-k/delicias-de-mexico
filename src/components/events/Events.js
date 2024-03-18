@@ -18,6 +18,7 @@ const Events = () => {
   if (error) {
     return <SectionError error={error} />;
   }
+
   return (
     <section className="section-events">
       <div className="container">
@@ -38,11 +39,9 @@ const Events = () => {
 
                 <div className="events__content">
                   <p className="events__date">
-                    August 19, {new Date().getFullYear()}
+                    January 1, {new Date().getFullYear()}
                   </p>
-
                   <p className="events__title">{food.title}</p>
-
                   <p className="events__text">
                     <EventBlog foodId={food.id} />
                   </p>
