@@ -31,6 +31,9 @@
   font-size: 3rem;
   font-weight: 700;
   color: #333;
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
 }
 .cart__item {
   font-weight: 300;

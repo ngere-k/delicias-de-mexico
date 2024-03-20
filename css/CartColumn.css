@@ -9,6 +9,7 @@
 .cart__column h5 {
   font-size: 1.6rem;
   font-weight: 500;
+  color: #333;
 }
 .cart__icon-hidden {
   visibility: hidden;

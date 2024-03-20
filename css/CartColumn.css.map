@@ -1,1 +1,1 @@
-{"version":3,"sources":["../src/components/cartColumn/CartColumn.scss","CartColumn.css"],"names":[],"mappings":"AACE;EACE,aAAA;EACA,8CAAA;EACA,mBAAA;EACA,qBAAA;EACA,qBAAA;EAEA,iBAAA;ACDJ;ADGI;EACE,iBAAA;EACA,gBAAA;ACDN;ADKE;EACE,kBAAA;ACHJ","file":"CartColumn.css"}
+{"version":3,"sources":["../src/components/cartColumn/CartColumn.scss","CartColumn.css","../src/sass/abstracts/_variable.scss"],"names":[],"mappings":"AAGE;EACE,aAAA;EACA,8CAAA;EACA,mBAAA;EACA,qBAAA;EACA,qBAAA;EAEA,iBAAA;ACHJ;ADKI;EACE,iBAAA;EACA,gBAAA;EACA,WECc;ADJpB;ADOE;EACE,kBAAA;ACLJ","file":"CartColumn.css"}
