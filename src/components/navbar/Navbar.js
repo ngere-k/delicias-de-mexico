@@ -76,10 +76,9 @@ const Navbar = () => {
             </li>
           )}
 
-          {/* when authenticated, display signout button here */}
           {user && (
             <li>
-              <NavLink
+              <Link
                 className="main-nav__link"
                 onClick={() => dispatch(signOutUser())}
               >
@@ -89,7 +88,7 @@ const Navbar = () => {
                 <span to="" className=" main-nav__sign-out">
                   Sign out
                 </span>
-              </NavLink>
+              </Link>
             </li>
           )}
 
