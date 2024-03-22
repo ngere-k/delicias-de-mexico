@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchFoods } from "./features/foods/foodsSlice";
 import { fetchReviews } from "./features/reviews/reviewsSlice";
@@ -32,7 +32,7 @@ import "./App.scss";
 import "react-toastify/dist/ReactToastify.css";
 
 function App() {
-  const { isAuthReady } = useSelector((store) => store.user);
+  const { isAuthReady, user } = useSelector((store) => store.user);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -64,7 +64,10 @@ function App() {
             <Route path="cart" element={<Cart />} />
             <Route path="sign-in" element={<Signin />} />
             <Route path="contact" element={<Contact />} />
-            <Route path="checkout" element={<Checkout />} />
+            <Route
+              path="checkout"
+              element={user ? <Checkout /> : <Navigate to="/sign-in" />}
+            />
             <Route path="dishes" element={<Dishes />} />
             <Route path="dishes/:id" element={<DishesInfo />} />
             <Route path="*" element={<Error />} />
