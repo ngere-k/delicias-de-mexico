@@ -1,12 +1,14 @@
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { formatPrice } from "../../utils/formatPrice";
+import { toast } from "react-toastify";
 
 // styles
 import "./CartSummary.scss";
 
 const CartSummary = () => {
   const { total_amount, delivery_fee } = useSelector((store) => store.cart);
+  const { user } = useSelector((store) => store.user);
 
   return (
     <article className="summary">
@@ -26,9 +28,22 @@ const CartSummary = () => {
         </div>
       </div>
 
-      <Link to="/checkout" className="btn btn--block text-center">
-        Checkout
-      </Link>
+      {user && (
+        <Link to="/checkout" className="btn btn--block text-center">
+          Checkout
+        </Link>
+      )}
+
+      {!user && (
+        <button
+          onClick={() =>
+            toast.error("Ready to checkout? Please sign in or register.")
+          }
+          className="btn btn--block text-center"
+        >
+          Checkout
+        </button>
+      )}
     </article>
   );
 };
