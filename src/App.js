@@ -11,6 +11,7 @@ import { userStateChanged } from "./features/user/userSlice";
 
 // components
 import Footer from "./components/footer/Footer";
+import ScrollToTop from "./components/scrollToTop/ScrollToTop";
 
 // pages
 import Home from "./pages/home/Home";
@@ -55,6 +56,7 @@ function App() {
       {isAuthReady && (
         <BrowserRouter>
           <Navbar />
+          <ScrollToTop />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="about" element={<About />} />
