@@ -1,7 +1,8 @@
-import { useState } from "react";
-import { useDispatch } from "react-redux";
+import { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import InputRow from "../../components/inputRow/InputRow";
 import { registerUser, signInUser } from "../../features/user/userSlice";
+import { useNavigate } from "react-router-dom";
 
 // styles
 import "./Signin.scss";
@@ -14,8 +15,10 @@ const initialState = {
 };
 
 const Signin = () => {
+  const { user } = useSelector((store) => store.user);
   const [state, setState] = useState(initialState);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     const name = e.target.name;
@@ -42,6 +45,11 @@ const Signin = () => {
   const toggleMember = () => {
     setState({ ...state, isAlreadyMember: !state.isAlreadyMember });
   };
+
+  useEffect(() => {
+    // navigate to previous route when authenticated
+    user && navigate(-1);
+  }, [user]);
 
   return (
     <section className="sign-in">
