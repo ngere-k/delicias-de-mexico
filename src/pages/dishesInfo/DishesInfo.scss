@@ -2,7 +2,7 @@
 @import "../../sass/abstracts/mixins";
 
 .food {
-  padding: 8rem 0;
+  padding: $page-padding;
 
   &__grid {
     display: grid;
