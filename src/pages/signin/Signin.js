@@ -47,9 +47,9 @@ const Signin = () => {
   };
 
   useEffect(() => {
-    // navigate to previous route when authenticated
+    // navigate to the previous route when authenticated
     user && navigate(-1);
-  }, [user]);
+  }, [user, navigate]);
 
   return (
     <section className="sign-in">
