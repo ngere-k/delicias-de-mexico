@@ -14,6 +14,15 @@
   grid-template-columns: 1fr 1fr;
   gap: 6.4rem;
 
+  @include respond(sm-desk) {
+    max-width: 120rem;
+  }
+
+  @include respond(tab-land) {
+    padding: 0 3.2rem;
+    gap: 3.2rem;
+  }
+
   &__description {
     font-size: 2rem;
     line-height: $line-height-1;
