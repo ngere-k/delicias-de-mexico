@@ -11,15 +11,15 @@ const Hero = () => {
       <div className="hero">
         <div className="hero__text-container">
           <h1 className="heading-primary">
-            A cozy and authentic place to enjoy the best of Mexican breakfast
+            A cozy spot for the best Mexican breakfast
           </h1>
 
           <p className="hero__description">
-            If you are looking for a delicious and satisfying way to start your
-            day, look no further than Delicias de Mexico. We offer a variety of
+            If you're seeking a delicious and satisfying way to start your day,
+            look no further than Delicias de Mexico. We offer a variety of
             traditional dishes that will make your mouth water and your stomach
-            happy. Come and experience the flavors and culture of Mexico in
-            every bite.
+            happy. Come and savor the rich flavors and vibrant culture of Mexico
+            in every delectable bite.
           </p>
 
           <div className="hero__btn-container">
