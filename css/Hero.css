@@ -10,6 +10,17 @@
   grid-template-columns: 1fr 1fr;
   gap: 6.4rem;
 }
+@media (max-width: 88em) {
+  .hero {
+    max-width: 120rem;
+  }
+}
+@media (max-width: 81em) {
+  .hero {
+    padding: 0 3.2rem;
+    gap: 3.2rem;
+  }
+}
 .hero__description {
   font-size: 2rem;
   line-height: 1.7;

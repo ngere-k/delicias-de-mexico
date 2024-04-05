@@ -10,6 +10,11 @@
 html {
   font-size: 62.5%;
 }
+@media (max-width: 81em) {
+  html {
+    font-size: 56.25%;
+  }
+}
 
 body {
   box-sizing: border-box;
@@ -24,8 +29,12 @@ body {
 
 .container {
   max-width: 120rem;
-  padding: 0 3.2rem;
   margin: 0 auto;
+}
+@media (max-width: 81em) {
+  .container {
+    padding: 0 3.2rem;
+  }
 }
 
 .grid-centered-container {
@@ -48,6 +57,11 @@ body {
   line-height: 1.18;
   letter-spacing: -0.5px;
   margin-bottom: 2.4rem;
+}
+@media (max-width: 81em) {
+  .heading-primary {
+    font-size: 4.4rem;
+  }
 }
 
 .heading-secondary {
@@ -148,6 +162,12 @@ a {
   padding: 1.6rem 4.8rem;
   background-color: #fdf2e9;
 }
+@media (max-width: 81em) {
+  .header {
+    padding: 1.6rem 3.2rem;
+    gap: 3.2rem;
+  }
+}
 
 .main-nav {
   display: flex;
@@ -163,6 +183,13 @@ a {
   align-items: center;
   gap: 3.2rem;
   list-style: none;
+}
+@media (max-width: 81em) {
+  .main-nav__list-1, .main-nav__list-2 {
+    display: flex;
+    align-items: center;
+    gap: 2.4rem;
+  }
 }
 .main-nav__icon {
   font-size: 2.4rem;

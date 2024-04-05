@@ -10,6 +10,11 @@
 html {
   font-size: 62.5%;
 }
+@media (max-width: 81em) {
+  html {
+    font-size: 56.25%;
+  }
+}
 
 body {
   box-sizing: border-box;
@@ -24,8 +29,12 @@ body {
 
 .container {
   max-width: 120rem;
-  padding: 0 3.2rem;
   margin: 0 auto;
+}
+@media (max-width: 81em) {
+  .container {
+    padding: 0 3.2rem;
+  }
 }
 
 .grid-centered-container {
@@ -48,6 +57,11 @@ body {
   line-height: 1.18;
   letter-spacing: -0.5px;
   margin-bottom: 2.4rem;
+}
+@media (max-width: 81em) {
+  .heading-primary {
+    font-size: 4.4rem;
+  }
 }
 
 .heading-secondary {
