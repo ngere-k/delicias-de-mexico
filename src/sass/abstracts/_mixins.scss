@@ -35,3 +35,19 @@
   justify-content: center;
   align-items: center;
 }
+
+// Media query
+@mixin respond($breakpoint) {
+  // small desktop - <= 1408px
+  @if $breakpoint == sm-desk {
+    @media (max-width: 88em) {
+      @content;
+    }
+  }
+  // tablet landscape - <= 1296px
+  @if $breakpoint == tab-land {
+    @media (max-width: 81em) {
+      @content;
+    }
+  }
+}
