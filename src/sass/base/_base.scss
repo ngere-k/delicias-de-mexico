@@ -1,3 +1,5 @@
+@import "../abstracts/mixins";
+
 *,
 *::before,
 *::after {
@@ -8,6 +10,10 @@
 
 html {
   font-size: 62.5%; // 1rem = 10px
+
+  @include respond(tab-land) {
+    font-size: 56.25%; // 1rem = 9px
+  }
 }
 
 body {
