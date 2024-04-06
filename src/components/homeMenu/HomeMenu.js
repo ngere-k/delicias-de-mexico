@@ -21,7 +21,7 @@ const HomeMenu = () => {
 
   return (
     <section className="section-home-menu">
-      <div className="container grid-centered-container">
+      <div className="container">
         <div className="text-center">
           <span className="subheading">menu</span>
           <h2 className="heading-secondary">
@@ -35,9 +35,11 @@ const HomeMenu = () => {
           })}
         </div>
 
-        <Link to="/menu">
-          <button className="btn ">View full menu</button>
-        </Link>
+        <div className="menu-link-box">
+          <Link to="/menu">
+            <button className="btn">View full menu</button>
+          </Link>
+        </div>
       </div>
     </section>
   );
