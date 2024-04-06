@@ -37,14 +37,6 @@ body {
   }
 }
 
-.grid-centered-container {
-  display: grid;
-  grid-template-columns: 1fr;
-  row-gap: 4.8rem;
-  justify-items: center;
-  align-items: center;
-}
-
 .heading-primary,
 .heading-secondary,
 .heading-tertiary {

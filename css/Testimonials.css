@@ -26,7 +26,17 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 99999;
+  z-index: 999;
+}
+@media (max-width: 88em) {
+  .testimonials {
+    width: 75%;
+  }
+}
+@media (max-width: 81em) {
+  .testimonials {
+    width: 70%;
+  }
 }
 .testimonials__btn-box {
   align-self: flex-end;
@@ -52,4 +62,9 @@
   justify-items: center;
   gap: 4.8rem;
   padding-top: 2.4rem;
+}
+@media (max-width: 81em) {
+  .testimonial {
+    gap: 3.2rem;
+  }
 }/*# sourceMappingURL=Testimonials.css.map */

@@ -15,14 +15,6 @@ body {
   }
 }
 
-.grid-centered-container {
-  display: grid;
-  grid-template-columns: 1fr;
-  row-gap: 4.8rem;
-  justify-items: center;
-  align-items: center;
-}
-
 .heading-primary,
 .heading-secondary,
 .heading-tertiary {
@@ -167,6 +159,11 @@ a {
   text-align: center;
   padding: 2.4rem;
   background-color: #fff;
+}
+@media (max-width: 81em) {
+  .special__content {
+    padding: 1.2rem;
+  }
 }
 .special__title {
   font-size: 2rem;
