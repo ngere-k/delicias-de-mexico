@@ -50,4 +50,10 @@
       @content;
     }
   }
+  // tablet landscape small - <= 1152px
+  @if $breakpoint == tab-land-sm {
+    @media (max-width: 72em) {
+      @content;
+    }
+  }
 }
