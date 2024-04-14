@@ -50,9 +50,15 @@
       @content;
     }
   }
-  // tablet landscape small - <= 1152px
+  // tablet landscape small - <= 1088px
   @if $breakpoint == tab-land-sm {
-    @media (max-width: 72em) {
+    @media (max-width: 68em) {
+      @content;
+    }
+  }
+  // tablet portrait - <= 960px
+  @if $breakpoint == tab-port {
+    @media (max-width: 60em) {
       @content;
     }
   }
