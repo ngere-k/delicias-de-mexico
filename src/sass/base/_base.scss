@@ -10,12 +10,17 @@
 
 html {
   font-size: 62.5%; // 1rem = 10px
+  overflow-x: hidden;
 
   @include respond(tab-land) {
     font-size: 56.25%; // 1rem = 9px
+  }
+  @include respond(tab-land-sm) {
+    font-size: 50%; // 1rem = 8px
   }
 }
 
 body {
   box-sizing: border-box;
+  overflow-x: hidden;
 }
