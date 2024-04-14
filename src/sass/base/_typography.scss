@@ -11,7 +11,7 @@ body {
   max-width: 120rem;
   margin: 0 auto;
 
-  @media (max-width: 81em) {
+  @include respond(tab-land) {
     padding: 0 3.2rem;
   }
 }
