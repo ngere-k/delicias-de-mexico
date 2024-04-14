@@ -2,6 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   isReviewOpen: false,
+  isSidebarOpen: false,
 };
 
 const modalSlice = createSlice({
@@ -14,10 +15,17 @@ const modalSlice = createSlice({
     closeReview: (state) => {
       state.isReviewOpen = false;
     },
+    openSidebar: (state) => {
+      state.isSidebarOpen = true;
+    },
+    closeSidebar: (state) => {
+      state.isSidebarOpen = false;
+    },
   },
 });
 
-export const { openReview, closeReview } = modalSlice.actions;
+export const { openReview, closeReview, openSidebar, closeSidebar } =
+  modalSlice.actions;
 
 const modalReducer = modalSlice.reducer;
 export default modalReducer;
