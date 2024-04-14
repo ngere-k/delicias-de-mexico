@@ -19,7 +19,7 @@ const Hero = () => {
             look no further than Delicias de Mexico. We offer a variety of
             traditional dishes that will make your mouth water and your stomach
             happy. Come and savor the rich flavors and vibrant culture of Mexico
-            in every delectable bite.
+            in every bite.
           </p>
 
           <div className="hero__btn-container">
