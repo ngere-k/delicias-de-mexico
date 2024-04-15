@@ -4,6 +4,10 @@
 .section-events {
   padding: $section-padding;
   background-color: $color-grey-light-1;
+
+  @include respond(tab-port) {
+    padding: $section-padding-md;
+  }
 }
 
 .events {
