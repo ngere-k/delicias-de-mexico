@@ -3,6 +3,10 @@
 
 .section-home-testimonials {
   padding: $section-padding;
+
+  @include respond(tab-port) {
+    padding: $section-padding-md;
+  }
 }
 
 .reviews {
