@@ -15,6 +15,10 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 3.2rem;
 
+  @include respond(tab-port) {
+    grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
+  }
+
   &__event {
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   }
