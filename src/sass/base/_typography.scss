@@ -37,10 +37,6 @@ body {
 .heading-secondary {
   font-size: 3.6rem;
   margin-bottom: 4.8rem;
-
-  @include respond(tab-port) {
-    margin-bottom: 3.2rem;
-  }
 }
 
 .heading-tertiary {
