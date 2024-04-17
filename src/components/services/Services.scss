@@ -1,13 +1,22 @@
 @import "../../sass/abstracts/variable";
+@import "../../sass/abstracts/mixins";
 
 .section-services {
   padding: $section-padding;
+
+  @include respond(tab-port) {
+    padding: $section-padding-md;
+  }
 }
 
 .services {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
-  gap: 2.4rem;
+  grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
+  column-gap: 3.2rem;
+
+  @include respond(tab-port) {
+    row-gap: 4.8rem;
+  }
 
   &__icon {
     display: inline-block;
