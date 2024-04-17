@@ -22,6 +22,11 @@
   padding: 2.4rem 0 6.4rem 0;
   background-color: #fdf2e9;
 }
+@media (max-width: 60em) {
+  .section-featured {
+    padding: 2.4rem 0 4.8rem 0;
+  }
+}
 
 .logos {
   display: flex;
@@ -29,8 +34,18 @@
   gap: 8rem;
   justify-content: center;
 }
+@media (max-width: 60em) {
+  .logos {
+    gap: 6.4rem;
+  }
+}
 .logos img {
   height: 5.2rem;
   filter: brightness(0);
   opacity: 50%;
+}
+@media (max-width: 60em) {
+  .logos img {
+    height: 4.4rem;
+  }
 }/*# sourceMappingURL=Featured.css.map */

@@ -3,6 +3,11 @@
   padding-bottom: 3.2rem;
   background-color: #fdf2e9;
 }
+@media (max-width: 60em) {
+  .footer {
+    padding: 6.4rem 0;
+  }
+}
 .footer__grid {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
