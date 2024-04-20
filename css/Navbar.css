@@ -246,7 +246,7 @@ a {
 @media (max-width: 60em) {
   .main-nav__list-2 {
     justify-content: center;
-    gap: 4.8rem;
+    gap: 6.4rem;
   }
 }
 .main-nav__icon {

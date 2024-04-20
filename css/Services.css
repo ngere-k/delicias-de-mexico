@@ -9,7 +9,7 @@
 
 .services {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
   -moz-column-gap: 3.2rem;
        column-gap: 3.2rem;
 }
