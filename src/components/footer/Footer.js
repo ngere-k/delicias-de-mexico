@@ -10,7 +10,7 @@ import "./Footer.scss";
 const Footer = () => {
   return (
     <footer className="footer">
-      <div className="container ">
+      <div className="container">
         <div className="footer__grid">
           <div className="footer__content">
             <Logo medium />
@@ -56,7 +56,7 @@ const Footer = () => {
           </div>
 
           {/* company */}
-          <div>
+          <div className="footer__company">
             <h3 className="heading-tertiary">Company</h3>
             <ul className="footer__nav-links">
               {footerNavLinks.company.map((link) => {
@@ -72,7 +72,7 @@ const Footer = () => {
           </div>
 
           {/* useful links */}
-          <div>
+          <div className="footer__useful">
             <h3 className="heading-tertiary">Useful links</h3>
             <ul className="footer__nav-links">
               {footerNavLinks["useful-links"].map((link) => {
@@ -88,7 +88,7 @@ const Footer = () => {
           </div>
 
           {/* account */}
-          <div>
+          <div className="footer__account">
             <h3 className="heading-tertiary">Account</h3>
             <ul className="footer__nav-links">
               {footerNavLinks.account.map((link) => {
