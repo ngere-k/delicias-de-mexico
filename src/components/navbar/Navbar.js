@@ -124,7 +124,7 @@ const Navbar = () => {
             </NavLink>
           </li>
           <li>
-            <Link to="/dishes">
+            <Link to="/dishes" onClick={() => dispatch(closeSidebar())}>
               <button className="btn">Order online</button>
             </Link>
           </li>
