@@ -72,6 +72,11 @@ a {
   background-color: $color-primary;
   @include transition;
 
+  @include respond(tab-port) {
+    padding: 1.6rem;
+    font-size: 2.4rem;
+  }
+
   &:hover {
     background-color: $color-primary-dark-1;
   }
