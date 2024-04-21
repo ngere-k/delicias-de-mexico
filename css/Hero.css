@@ -61,6 +61,9 @@
 @media (max-width: 60em) {
   .hero__btn-container {
     justify-content: center;
+    display: flex;
+    align-items: center;
+    gap: 3.2rem;
   }
 }
 .hero__icon {
