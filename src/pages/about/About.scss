@@ -11,6 +11,12 @@
   grid-template-columns: 1fr 1fr;
   gap: 6.4rem;
 
+  @include respond(tab-port) {
+    grid-template-columns: 1fr;
+    gap: 8rem;
+    width: 85%;
+  }
+
   &__paragraphs {
     font-size: 1.8rem;
     line-height: $line-height-1;
@@ -21,6 +27,10 @@
   &__img-box {
     border-radius: 4px;
     overflow: hidden;
+
+    @include respond(tab-port) {
+      grid-row: 1;
+    }
   }
 
   &__img {
