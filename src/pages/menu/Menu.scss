@@ -18,5 +18,12 @@
     transform: translateY(-6.4rem);
     background-color: $color-white;
     box-shadow: $box-shadow-1;
+
+    @include respond(tab-port) {
+      grid-template-columns: 1fr;
+      gap: 3.2rem;
+      padding: 3.2rem;
+      transform: translateY(-2.4rem);
+    }
   }
 }
