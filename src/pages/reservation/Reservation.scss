@@ -12,9 +12,17 @@
     row-gap: 3.2rem;
     column-gap: 2.4rem;
     margin: 8rem 0;
+
+    @include respond(tab-port) {
+      grid-template-columns: 1fr 1fr;
+    }
   }
 
   &__btn-box {
     grid-column: 2 / 3;
+
+    @include respond(tab-port) {
+      grid-column: 1 / -1;
+    }
   }
 }
