@@ -8,10 +8,21 @@
   grid-template-columns: 1fr 1fr;
   gap: 4.8rem;
 }
+@media (max-width: 60em) {
+  .contact {
+    grid-template-columns: 1fr;
+    width: 80%;
+  }
+}
 .contact__content {
   background-color: #fff;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   padding: 2.4rem;
+}
+@media (max-width: 60em) {
+  .contact__content {
+    padding: 3.2rem 2.4rem;
+  }
 }
 .contact__lists {
   display: flex;

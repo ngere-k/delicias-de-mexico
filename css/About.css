@@ -8,6 +8,13 @@
   grid-template-columns: 1fr 1fr;
   gap: 6.4rem;
 }
+@media (max-width: 60em) {
+  .about {
+    grid-template-columns: 1fr;
+    gap: 8rem;
+    width: 85%;
+  }
+}
 .about__paragraphs {
   font-size: 1.8rem;
   line-height: 1.7;
@@ -18,6 +25,11 @@
 .about__img-box {
   border-radius: 4px;
   overflow: hidden;
+}
+@media (max-width: 60em) {
+  .about__img-box {
+    grid-row: 1;
+  }
 }
 .about__img {
   display: block;

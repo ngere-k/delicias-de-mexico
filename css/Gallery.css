@@ -1,12 +1,22 @@
 .gallery {
   background-color: #faf9f9;
-  padding: 1.5rem;
+  padding: 1.6rem;
+}
+@media (max-width: 60em) {
+  .gallery {
+    padding: 0.8rem;
+  }
 }
 .gallery__content {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: repeat(7, 5vw);
-  gap: 1.5rem;
+  gap: 1.6rem;
+}
+@media (max-width: 60em) {
+  .gallery__content {
+    gap: 0.8rem;
+  }
 }
 .gallery__item--1 {
   grid-column: 1/2;

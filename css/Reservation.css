@@ -1,5 +1,6 @@
 .reservation__hero {
   background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../../assets/img/reserve.jpg");
+  height: 20vw;
 }
 .reservation__form {
   display: grid;
@@ -10,6 +11,16 @@
        column-gap: 2.4rem;
   margin: 8rem 0;
 }
+@media (max-width: 60em) {
+  .reservation__form {
+    grid-template-columns: 1fr 1fr;
+  }
+}
 .reservation__btn-box {
   grid-column: 2/3;
+}
+@media (max-width: 60em) {
+  .reservation__btn-box {
+    grid-column: 1/-1;
+  }
 }/*# sourceMappingURL=Reservation.css.map */

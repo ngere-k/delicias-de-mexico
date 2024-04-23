@@ -5,6 +5,7 @@
 .dishes__hero {
   margin-bottom: 8rem;
   background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../../assets/img/delivery.jpg");
+  height: 20vw;
 }
 .dishes__items {
   display: grid;
