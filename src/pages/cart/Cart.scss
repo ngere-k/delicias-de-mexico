@@ -26,6 +26,10 @@
   align-items: start;
   gap: 3.2rem;
 
+  @include respond(tab-port) {
+    grid-template-columns: 1fr;
+  }
+
   &__container {
     padding: 3.2rem;
     border-radius: 0.9rem;
