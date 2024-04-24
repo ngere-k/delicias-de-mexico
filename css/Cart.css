@@ -23,6 +23,11 @@
   align-items: start;
   gap: 3.2rem;
 }
+@media (max-width: 60em) {
+  .cart {
+    grid-template-columns: 1fr;
+  }
+}
 .cart__container {
   padding: 3.2rem;
   border-radius: 0.9rem;
