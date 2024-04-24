@@ -99,6 +99,11 @@ a {
 
   &--padding-left-right-sm {
     padding: 0.8rem 1.6rem;
+    // button padding and size remain the same on tablet portrait
+    @include respond(tab-port) {
+      font-size: 2rem;
+      padding: 0.8rem 1.6rem;
+    }
   }
 }
 
