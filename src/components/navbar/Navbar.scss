@@ -18,6 +18,9 @@
   @include respond(tab-port) {
     grid-template-columns: 1fr auto;
   }
+  @include respond(phone) {
+    padding: 1.6rem;
+  }
 }
 
 .main-nav {
@@ -69,6 +72,10 @@
       margin-top: 18rem;
       margin-bottom: 6.4rem;
     }
+    @include respond(phone) {
+      margin-top: 14rem;
+      margin-bottom: 2.4rem;
+    }
   }
 
   &__list-1 li {
@@ -82,6 +89,9 @@
       padding: 2.4rem;
       padding-left: 4.8rem;
     }
+    @include respond(phone) {
+      padding-left: 2.4rem;
+    }
   }
 
   &__list-1 &__link:hover {
@@ -94,6 +104,22 @@
     @include respond(tab-port) {
       justify-content: center;
       gap: 6.4rem;
+    }
+    @include respond(phone) {
+      @include flex-column(0);
+      align-items: flex-start;
+    }
+  }
+
+  &__list-2 &__link {
+    @include respond(phone) {
+      padding: 2.4rem;
+    }
+  }
+
+  &__list-2 li:last-child {
+    @include respond(phone) {
+      padding-left: 2.4rem;
     }
   }
 
@@ -141,6 +167,11 @@
     position: fixed;
     top: 2.4rem;
     right: 3.2rem;
+
+    @include respond(phone) {
+      top: 1.6rem;
+      right: 1.6rem;
+    }
   }
 
   @include respond(tab-port) {
