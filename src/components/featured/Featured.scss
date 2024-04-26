@@ -18,6 +18,9 @@
   @include respond(tab-port) {
     gap: 6.4rem;
   }
+  @include respond(phone) {
+    gap: 3.2rem;
+  }
 
   img {
     height: 5.2rem;
@@ -26,6 +29,9 @@
 
     @include respond(tab-port) {
       height: 4.4rem;
+    }
+    @include respond(phone) {
+      height: 3rem;
     }
   }
 }
