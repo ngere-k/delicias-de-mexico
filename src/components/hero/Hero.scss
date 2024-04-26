@@ -34,10 +34,18 @@
     gap: 8rem;
     text-align: center;
   }
+  @include respond(phone) {
+    padding: 0 1.6rem;
+    gap: 6.4rem;
+  }
 
   &__text-container {
     @include respond(tab-port) {
       padding: 0 4.8rem;
+    }
+    @include respond(phone) {
+      text-align: left;
+      padding: 0;
     }
   }
 
@@ -58,6 +66,10 @@
       justify-content: center;
       @include flex-vertical-center(3.2rem);
     }
+    @include respond(phone) {
+      align-items: flex-start;
+      @include flex-column(1.6rem);
+    }
   }
 
   &__icon {
@@ -75,6 +87,9 @@
     @include respond(tab-port) {
       width: 75%;
       justify-self: center;
+    }
+    @include respond(phone) {
+      width: 100%;
     }
   }
 
