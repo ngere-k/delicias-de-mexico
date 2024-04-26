@@ -38,9 +38,21 @@
     text-align: center;
   }
 }
+@media (max-width: 38em) {
+  .hero {
+    padding: 0 1.6rem;
+    gap: 6.4rem;
+  }
+}
 @media (max-width: 60em) {
   .hero__text-container {
     padding: 0 4.8rem;
+  }
+}
+@media (max-width: 38em) {
+  .hero__text-container {
+    text-align: left;
+    padding: 0;
   }
 }
 .hero__description {
@@ -66,6 +78,14 @@
     gap: 3.2rem;
   }
 }
+@media (max-width: 38em) {
+  .hero__btn-container {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+  }
+}
 .hero__icon {
   transition: all 0.3s;
 }
@@ -80,6 +100,11 @@
   .hero__image-container {
     width: 75%;
     justify-self: center;
+  }
+}
+@media (max-width: 38em) {
+  .hero__image-container {
+    width: 100%;
   }
 }
 .hero__img {
