@@ -25,5 +25,8 @@
       padding: 3.2rem;
       transform: translateY(-2.4rem);
     }
+    @include respond(phone) {
+      padding: 2.4rem 1.6rem;
+    }
   }
 }
