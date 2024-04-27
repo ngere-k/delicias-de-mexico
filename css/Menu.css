@@ -23,4 +23,9 @@
     padding: 3.2rem;
     transform: translateY(-2.4rem);
   }
+}
+@media (max-width: 38em) {
+  .menu-page__content {
+    padding: 2.4rem 1.6rem;
+  }
 }/*# sourceMappingURL=Menu.css.map */

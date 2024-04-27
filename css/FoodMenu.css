@@ -5,6 +5,12 @@
   -moz-column-gap: 2.4rem;
        column-gap: 2.4rem;
 }
+@media (max-width: 38em) {
+  .menu {
+    -moz-column-gap: 1.6rem;
+         column-gap: 1.6rem;
+  }
+}
 .menu__img-box {
   width: 10rem;
   height: 10rem;
@@ -25,9 +31,20 @@
        column-gap: 2.4rem;
   row-gap: 0.6rem;
 }
+@media (max-width: 38em) {
+  .menu__detail {
+    grid-template-columns: 1fr;
+    gap: 0.4rem;
+  }
+}
 .menu__heading {
   line-height: 1;
   margin: 0 !important;
+}
+@media (max-width: 38em) {
+  .menu__heading {
+    grid-row: 2;
+  }
 }
 .menu__ingredients {
   font-size: 1.6rem;
@@ -35,6 +52,16 @@
   grid-column: 1/2;
   grid-row: 2/3;
 }
+@media (max-width: 38em) {
+  .menu__ingredients {
+    grid-row: 3;
+  }
+}
 .menu__price {
   color: #333;
+}
+@media (max-width: 38em) {
+  .menu__price {
+    grid-row: 1;
+  }
 }/*# sourceMappingURL=FoodMenu.css.map */

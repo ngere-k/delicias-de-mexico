@@ -28,6 +28,12 @@
   transform: translate(-50%, -50%);
   z-index: 99999;
 }
+@media (max-width: 38em) {
+  .testimonials {
+    width: 85vw;
+    padding: 2.4rem;
+  }
+}
 .testimonials__btn-box {
   align-self: flex-end;
 }
