@@ -23,6 +23,10 @@
     url($url);
 
   height: 20vw;
+
+  @include respond(phone) {
+    height: 20rem;
+  }
 }
 
 @mixin image-fit {
