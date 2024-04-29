@@ -4,6 +4,12 @@
 .sign-in {
   background-color: $color-grey-light-1;
   padding: $page-padding;
+
+  @include respond(phone) {
+    padding: $page-padding-md;
+    padding-left: 1.6rem;
+    padding-right: 1.6rem;
+  }
 }
 
 .form {
@@ -13,6 +19,10 @@
   background-color: $color-white;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
     0 2px 4px -1px rgba(0, 0, 0, 0.06);
+
+  @include respond(phone) {
+    padding: 4.8rem 2.4rem;
+  }
 
   &__heading {
     text-align: center;
