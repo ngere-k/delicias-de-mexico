@@ -2,6 +2,11 @@
   background-color: #faf9f9;
   padding: 8rem 0;
 }
+@media (max-width: 38em) {
+  .article-about {
+    padding: 4.8rem 0;
+  }
+}
 
 .about {
   display: grid;
@@ -13,6 +18,12 @@
     grid-template-columns: 1fr;
     gap: 8rem;
     width: 85%;
+  }
+}
+@media (max-width: 38em) {
+  .about {
+    width: 100%;
+    gap: 4.8rem;
   }
 }
 .about__paragraphs {

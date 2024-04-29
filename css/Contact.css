@@ -2,6 +2,11 @@
   padding: 8rem 0;
   background-color: #faf9f9;
 }
+@media (max-width: 38em) {
+  .article-contact {
+    padding: 4.8rem 0;
+  }
+}
 
 .contact {
   display: grid;
@@ -12,6 +17,11 @@
   .contact {
     grid-template-columns: 1fr;
     width: 80%;
+  }
+}
+@media (max-width: 38em) {
+  .contact {
+    width: 100%;
   }
 }
 .contact__content {

@@ -5,6 +5,11 @@
   background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../../assets/img/menu.jpg");
   height: 20vw;
 }
+@media (max-width: 38em) {
+  .menu-page__hero {
+    height: 20rem;
+  }
+}
 .menu-page__content {
   display: grid;
   grid-template-columns: 1fr 1fr;

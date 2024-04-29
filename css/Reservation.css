@@ -2,6 +2,11 @@
   background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../../assets/img/reserve.jpg");
   height: 20vw;
 }
+@media (max-width: 38em) {
+  .reservation__hero {
+    height: 20rem;
+  }
+}
 .reservation__form {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
