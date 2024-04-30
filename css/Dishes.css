@@ -2,6 +2,11 @@
   background-color: #faf9f9;
   padding-bottom: 8rem;
 }
+@media (max-width: 38em) {
+  .dishes {
+    padding-bottom: 4.8rem;
+  }
+}
 .dishes__hero {
   margin-bottom: 8rem;
   background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../../assets/img/delivery.jpg");
@@ -12,15 +17,25 @@
     height: 20rem;
   }
 }
+@media (max-width: 38em) {
+  .dishes__hero {
+    margin-bottom: 4.8rem;
+  }
+}
 .dishes__items {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   list-style: none;
-  gap: 1.5rem;
+  gap: 1.6rem;
   background-color: #fff;
   padding: 3.2rem;
   border-radius: 9px;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+@media (max-width: 38em) {
+  .dishes__items {
+    padding: 1.6rem;
+  }
 }
 .dishes__list {
   padding: 9px;

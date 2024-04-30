@@ -10,6 +10,11 @@
     justify-self: right;
   }
 }
+@media (max-width: 38em) {
+  .summary {
+    width: 100%;
+  }
+}
 .summary__content {
   display: flex;
   flex-direction: column;
