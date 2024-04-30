@@ -1,4 +1,5 @@
 @import "../../sass/abstracts/mixins";
+@import "../../sass/abstracts/variable";
 
 .reservation {
   &__hero {
@@ -11,10 +12,14 @@
     align-items: center;
     row-gap: 3.2rem;
     column-gap: 2.4rem;
-    margin: 8rem 0;
+    margin: $page-padding;
 
     @include respond(tab-port) {
       grid-template-columns: 1fr 1fr;
+    }
+    @include respond(phone) {
+      grid-template-columns: 1fr;
+      margin: $page-padding-md;
     }
   }
 
