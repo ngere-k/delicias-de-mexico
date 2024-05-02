@@ -10,6 +10,11 @@
     padding: 1.2rem;
     border-radius: 0.9rem;
     box-shadow: $box-shadow-2;
+
+    @include respond(phone) {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.2rem;
+    }
   }
 
   &__figure-container {
@@ -19,6 +24,10 @@
     grid-template-columns: auto 1fr;
     align-items: center;
     gap: 1.8rem;
+
+    @include respond(phone) {
+      grid-column: 1 / -1;
+    }
   }
 
   &__figure {
@@ -41,6 +50,11 @@
   &__price {
     color: $color-grey-dark-2;
     font-weight: 500;
+
+    @include respond(phone) {
+      grid-column: 1 / 2;
+      grid-row: 2;
+    }
   }
 
   &__btn {
