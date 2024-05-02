@@ -6,6 +6,11 @@
   margin-bottom: 1.2rem;
   padding: 0 1.2rem;
 }
+@media (max-width: 38em) {
+  .cart__column {
+    display: none;
+  }
+}
 .cart__column h5 {
   font-size: 1.6rem;
   font-weight: 500;

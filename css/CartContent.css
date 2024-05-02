@@ -7,12 +7,23 @@
   border-radius: 0.9rem;
   box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
 }
+@media (max-width: 38em) {
+  .cart__product {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.2rem;
+  }
+}
 .cart__figure-container {
   justify-self: start;
   display: grid;
   grid-template-columns: auto 1fr;
   align-items: center;
   gap: 1.8rem;
+}
+@media (max-width: 38em) {
+  .cart__figure-container {
+    grid-column: 1/-1;
+  }
 }
 .cart__figure {
   width: 9rem;
@@ -35,6 +46,12 @@
 .cart__price {
   color: #333;
   font-weight: 500;
+}
+@media (max-width: 38em) {
+  .cart__price {
+    grid-column: 1/2;
+    grid-row: 2;
+  }
 }
 .cart__btn {
   border: none;
