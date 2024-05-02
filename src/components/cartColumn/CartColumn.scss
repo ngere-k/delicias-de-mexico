@@ -1,4 +1,5 @@
 @import "../../sass/abstracts/variable";
+@import "../../sass/abstracts/mixins";
 
 .cart {
   &__column {
@@ -9,6 +10,10 @@
     margin-bottom: 1.2rem;
     // for invisible icon to align with delete icon
     padding: 0 1.2rem;
+
+    @include respond(phone) {
+      display: none;
+    }
 
     h5 {
       font-size: 1.6rem;
