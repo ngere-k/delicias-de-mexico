@@ -18,6 +18,10 @@
 .article-cart {
   padding: $page-padding;
   background-color: #f7f7f7;
+
+  @include respond(phone) {
+    padding: $page-padding-md;
+  }
 }
 
 .cart {
@@ -35,6 +39,10 @@
     border-radius: 0.9rem;
     background-color: $color-white;
     box-shadow: $box-shadow-2;
+
+    @include respond(phone) {
+      padding: 1.6rem;
+    }
   }
 
   &__content {
